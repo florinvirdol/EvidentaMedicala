@@ -1,0 +1,9 @@
+http://webexplorar.com/jquery-autocomplete-example-with-database-accessing/
+
+http://www.codersmount.com/2012/09/jquery-ui-autocomplete-in-codeigniter-with-database/
+
+http://adevarul.ro/life-style/stil-de-viata/experiment-mai-frumosi-decat-credem-clipul-schimba-perceptia-despre-propria-persoana-8_516d4c5e053c7dd83f149f91/index.html
+
+http://stackoverflow.com/questions/9122755/retrieve-data-from-dynamically-generated-form
+
+http://docs.jquery.com/Plugins/Validation

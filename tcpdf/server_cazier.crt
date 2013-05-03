@@ -1,0 +1,63 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=RO, ST=B, L=B, O=Cazier, OU=eCazier, CN=Server Cazier
+        Validity
+            Not Before: Jul  2 20:35:40 2012 GMT
+            Not After : Jul  2 20:35:40 2013 GMT
+        Subject: C=RO, ST=B, O=Cazier, OU=ServerAplicatie, CN=Server
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:c9:29:8a:f8:5a:dd:c3:a4:a5:64:75:31:34:18:
+                    93:4e:d3:80:4d:75:c1:69:ac:f4:be:20:d1:b1:15:
+                    ff:c8:c2:99:8a:4c:86:7f:62:0e:35:b7:71:c3:aa:
+                    da:d6:73:06:d1:e6:a7:6f:c4:ca:47:9c:bd:ba:c2:
+                    75:ea:18:7c:ea:22:80:ca:82:44:e5:a1:3d:07:e5:
+                    74:f8:a4:09:88:6d:6e:4e:3a:c7:eb:87:dc:39:b0:
+                    35:17:da:79:1f:36:b7:f7:28:71:ad:f7:fe:a7:f8:
+                    c5:5a:d2:ad:f0:71:2d:bf:57:aa:f8:fd:7e:1f:ad:
+                    c3:4c:30:86:28:5d:02:a5:dd
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                CD:5A:E3:92:08:4C:83:11:AA:9E:75:50:93:D4:0B:C1:B4:30:9A:EB
+            X509v3 Authority Key Identifier: 
+                DirName:/C=RO/ST=B/L=B/O=Cazier/OU=eCazier/CN=Server Cazier
+                serial:E8:BA:E9:3E:93:01:22:80
+
+    Signature Algorithm: sha1WithRSAEncryption
+        8b:ae:b7:bc:28:6a:2e:9b:97:32:e1:d8:50:a7:5e:dc:fc:2e:
+        92:23:37:79:5e:69:1d:35:e6:25:21:bf:80:dd:0c:49:ce:81:
+        f9:61:9e:61:4e:69:88:19:bd:e9:7d:f9:ea:bd:a3:77:71:dc:
+        1f:83:0a:df:a1:13:f5:64:42:5f:0c:2c:10:1f:ac:2c:fa:1c:
+        1c:d1:84:1f:df:cb:9b:d4:22:ec:ac:ad:6f:e6:6b:f1:51:bb:
+        0e:1d:fe:8e:a9:28:55:d8:e6:3f:7b:15:61:7a:09:7a:50:aa:
+        10:e5:82:f7:c5:bb:dd:f7:65:4d:68:be:60:59:a8:60:15:10:
+        33:9d
+-----BEGIN CERTIFICATE-----
+MIIDAzCCAmygAwIBAgIBATANBgkqhkiG9w0BAQUFADBgMQswCQYDVQQGEwJSTzEK
+MAgGA1UECBMBQjEKMAgGA1UEBxMBQjEPMA0GA1UEChMGQ2F6aWVyMRAwDgYDVQQL
+EwdlQ2F6aWVyMRYwFAYDVQQDEw1TZXJ2ZXIgQ2F6aWVyMB4XDTEyMDcwMjIwMzU0
+MFoXDTEzMDcwMjIwMzU0MFowVTELMAkGA1UEBhMCUk8xCjAIBgNVBAgTAUIxDzAN
+BgNVBAoTBkNhemllcjEYMBYGA1UECxMPU2VydmVyQXBsaWNhdGllMQ8wDQYDVQQD
+EwZTZXJ2ZXIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMkpivha3cOkpWR1
+MTQYk07TgE11wWms9L4g0bEV/8jCmYpMhn9iDjW3ccOq2tZzBtHmp2/EykecvbrC
+deoYfOoigMqCROWhPQfldPikCYhtbk46x+uH3DmwNRfaeR82t/coca33/qf4xVrS
+rfBxLb9Xqvj9fh+tw0wwhihdAqXdAgMBAAGjgdcwgdQwCQYDVR0TBAIwADAsBglg
+hkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0O
+BBYEFM1a45IITIMRqp51UJPUC8G0MJrrMHoGA1UdIwRzMHGhZKRiMGAxCzAJBgNV
+BAYTAlJPMQowCAYDVQQIEwFCMQowCAYDVQQHEwFCMQ8wDQYDVQQKEwZDYXppZXIx
+EDAOBgNVBAsTB2VDYXppZXIxFjAUBgNVBAMTDVNlcnZlciBDYXppZXKCCQDouuk+
+kwEigDANBgkqhkiG9w0BAQUFAAOBgQCLrre8KGoum5cy4dhQp17c/C6SIzd5Xmkd
+NeYlIb+A3QxJzoH5YZ5hTmmIGb3pffnqvaN3cdwfgwrfoRP1ZEJfDCwQH6ws+hwc
+0YQf38ub1CLsrK1v5mvxUbsOHf6OqShV2OY/exVhegl6UKoQ5YL3xbvd92VNaL5g
+WahgFRAznQ==
+-----END CERTIFICATE-----
