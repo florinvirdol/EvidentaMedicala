@@ -60,16 +60,22 @@ class Retetemodel extends CI_Model
 //    public function getMedicamenteNecompensate($input)
     public function getMedicamente($input)
     {
-        $results = $this->db->select('*')->like('nume_medicament', $input, 'after')->get('medicamente_nomenclatoare')->result_array();
+        $results = $this->db->select('*')->like('nume_medicament', $input, 'after')->get('medicamente_nomenclatoare');
+        /*$this->db->select('*');
+        $this->db->like('nume_medicament', $input, 'after');
+        $results = $this->db->get('medicamente_nomenclatoare')->result_array();*/
 
-        echo "CEVA!!2!!";
+//        echo "CEVA!!2!!";
         //var_dump($results);exit;
 
         if ($results->num_rows)
         {
-            foreach ($results as $row)
+            foreach ($results->result_array() as $row)
             {
+                //ce afiseaza in lista de sugestii
                 $new_row['label'] = htmlentities(stripslashes($row['nume_medicament']));
+
+                //ce baga in input cand se selecteaza  o sugestie
                 $new_row['value'] = htmlentities(stripslashes($row['id']));//??nume?
 
                 //build an array

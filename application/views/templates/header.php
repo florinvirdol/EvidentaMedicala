@@ -211,6 +211,13 @@
 
 <!--                        source: "--><?//=base_url()?><!--" + "lucrari/getMedicamenteNecompensate"-->
 
+//http://stackoverflow.com/questions/13896828/jquery-ui-autocomplete-not-send-hidden-input-new-value-to-script-url
+//http://stackoverflow.com/questions/15200964/how-to-pass-hidden-id-using-json-in-jquery-ui-autocomplete/15223586#15223586
+//https://forum.jquery.com/topic/jquery-autocomplete-update-of-multiple-fields
+//http://stackoverflow.com/questions/16060920/jquery-ui-autocomplete-how-can-i-set-the-id-into-the-textbox-and-it-will-return
+//http://stackoverflow.com/questions/15200964/how-to-pass-hidden-id-using-json-in-jquery-ui-autocomplete
+//http://stackoverflow.com/questions/15382719/jquery-ui-autocomplete-how-to-storage-the-items-not-only-the-values
+//http://jsfiddle.net/fU8hn/4/
 
                         $("#medicament_1").autocomplete({
                             // path to the get_birds method

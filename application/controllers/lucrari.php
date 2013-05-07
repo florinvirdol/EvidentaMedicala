@@ -283,7 +283,7 @@ class Lucrari extends CI_Controller {
 		
  		//exit;
 		
-        echo "CEVA!!1!!";
+//        echo "CEVA!!1!!";
 
 //        var_dump($input);exit;
 
