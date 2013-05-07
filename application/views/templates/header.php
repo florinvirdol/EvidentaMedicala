@@ -203,6 +203,22 @@
 
                     $(document).ready(function()
                     {
+                        /*$("#birds").autocomplete({
+                            source: "birds/get_birds" // path to the get_birds method
+                        });*/
+
+                        //TODO: lucrari -> retete : controller !!!
+
+<!--                        source: "--><?//=base_url()?><!--" + "lucrari/getMedicamenteNecompensate"-->
+
+
+                        $("#medicament_1").autocomplete({
+                            // path to the get_birds method
+                            source: "<?=base_url()?>" + "lucrari/getMedicamenteNecompensate"
+                        });
+
+
+
                         $('#salveazaRetetaForm').on('submit', function(event)
                         {
                             // adding rules for inputs with class 'comment'

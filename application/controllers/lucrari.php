@@ -15,6 +15,9 @@ class Lucrari extends CI_Controller {
         if (!isset($_SESSION['user_id']))
             redirect(base_url() . 'login');
         $this->load->helper(array('form', 'url'));
+
+        $this->load->model('retetemodel');
+
     }
 
     function get_lucrare_detail_by_nr() {
@@ -254,9 +257,52 @@ class Lucrari extends CI_Controller {
     }
 
 
+    /*function get_birds()
+    {
+        $this->load->model('birds_model');
+        if (isset($_GET['term']))
+        {
+            $q = strtolower($_GET['term']);
+            $this->birds_model->get_bird($q);
+        }
+    }*/
+    public function getMedicamenteNecompensate()
+    {
+        //TODO?? din js - dinamic, apelez functia de autocomplete pt fiecare input creat
+        //  acolo pun in parametru si id-u'
+
+        //??switch ce medicamente sa returneze: compens?necompens
+
+        //$input = $_GET['medicament_1'];
+		$input = $_GET['term'];
+		
+		//source: "lucrari/getMedicamenteNecompensate"
+		
+		//var_dump($_GET);
+		//var_dump($_POST);
+		
+ 		//exit;
+		
+        echo "CEVA!!1!!";
+
+//        var_dump($input);exit;
+
+        if (isset($input))
+        {
+            $input = strtolower($input);
+            $this->retetemodel->getMedicamente($input);
+        }
+/*        if (isset($_GET['term']))
+        {
+            $q = strtolower($_GET['term']);
+            $this->retetemodel->getMedicamente($q);
+        }*/
+    }
+
+
 //    function adauga_reteta()
 //    function inregistreazaReteta()
-    function salveazaReteta()
+    public function salveazaReteta()
     {
         $this->load->library('form_validation');
 
@@ -312,7 +358,7 @@ class Lucrari extends CI_Controller {
                 echo "success";
 //                $this->load->view('formsuccess');
 
-                $this->load->model('retetemodel');
+//                $this->load->model('retetemodel');//??????constructor!!
 
 
                 //if.... insert    else    update

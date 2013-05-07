@@ -95,10 +95,10 @@
                             <div id="medicamente_compensate">
                                 <fieldset id="info_medicament_1">
                                     <legend>Medicament 1</legend>
-                                    <label for="medicament_1">Nume Internațional</label>
-                                    <input type="text" name="medicament_1" value="<?=set_value('medicament_1')?>" class="<?=form_error('medicament_1') ? "error" : ""?>">
-                                    <label for="medicament_1">Nume Comercial</label>
-                                    <input type="text" name="medicament_1" value="<?=set_value('medicament_1')?>" class="<?=form_error('medicament_1') ? "error" : ""?>">
+                                    <label for="medicament_1_c_i">Nume Internațional</label>
+                                    <input type="text" name="medicament_1_c_i" value="<?=set_value('medicament_1_c_i')?>" class="<?=form_error('medicament_1_c_i') ? "error" : ""?>">
+                                    <label for="medicament_1_c_c">Nume Comercial</label>
+                                    <input type="text" name="medicament_1_c_c" value="<?=set_value('medicament_1_c_c')?>" class="<?=form_error('medicament_1_c_c') ? "error" : ""?>">
                                     <br>
                                     <label for="valoare_amanunt_medicament_1">Valoare Amanunt</label>
                                     <input type="text" name="valoare_amanunt_medicament_1" value="<?=set_value('valoare_amanunt_medicament_1')?>" class="<?=form_error('valoare_amanunt_medicament_1') ? "error" : ""?>">
@@ -116,7 +116,7 @@
                                 <fieldset id="info_medicament_1">
                                     <legend>Medicament 1</legend>
                                     <label for="medicament_1">Nume Comercial</label>
-                                    <input type="text" name="medicament_1" value="<?=set_value('medicament_1')?>" class="<?=form_error('medicament_1') ? "error" : ""?>">
+                                    <input type="text" name="medicament_1" id="medicament_1" value="<?=set_value('medicament_1')?>" class="<?=form_error('medicament_1') ? "error" : ""?>">
                                     <label for="valoare_medicament_1">Valoare</label>
                                     <input type="text" name="valoare_medicament_1" value="<?=set_value('valoare_amanunt_medicament_1')?>" class="<?=form_error('valoare_medicament_1') ? "error" : ""?>">
                                     <br>

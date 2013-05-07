@@ -44,6 +44,41 @@ class Retetemodel extends CI_Model
         $this->db->insert('medicamente_retete', $data_medicament_reteta);
     }
 
+    /*function get_bird($q){
+        $this->db->select('*');
+        $this->db->like('bird', $q);
+        $query = $this->db->get('birds');
+        if($query->num_rows > 0){
+            foreach ($query->result_array() as $row){
+                $new_row['label']=htmlentities(stripslashes($row['bird']));
+                $new_row['value']=htmlentities(stripslashes($row['aka']));
+                $row_set[] = $new_row; //build an array
+            }
+            echo json_encode($row_set); //format the array into json data
+        }
+    }*/
+//    public function getMedicamenteNecompensate($input)
+    public function getMedicamente($input)
+    {
+        $results = $this->db->select('*')->like('nume_medicament', $input, 'after')->get('medicamente_nomenclatoare')->result_array();
+
+        echo "CEVA!!2!!";
+        //var_dump($results);exit;
+
+        if ($results->num_rows)
+        {
+            foreach ($results as $row)
+            {
+                $new_row['label'] = htmlentities(stripslashes($row['nume_medicament']));
+                $new_row['value'] = htmlentities(stripslashes($row['id']));//??nume?
+
+                //build an array
+                $row_set[] = $new_row;
+            }
+            echo json_encode($row_set); //format the array into json data
+        }
+    }
+
     public function adaugaReteta()
     {
         //?? e null in session pt Secretariat!!! ????

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe45f60d-99ff-4abe-a080-38fc83518b39" name="Default" comment="" />
+    <list default="true" id="fe45f60d-99ff-4abe-a080-38fc83518b39" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/header.php" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/lucrari.php" afterPath="$PROJECT_DIR$/application/controllers/lucrari.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/retetemodel.php" afterPath="$PROJECT_DIR$/application/models/retetemodel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/salveaza_reteta.php" afterPath="$PROJECT_DIR$/application/views/salveaza_reteta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="EvidentaMedicala.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/header.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367316138317" ignored="false" />
@@ -10,12 +18,13 @@
     <file path="/a.dummy" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367231987227" ignored="false" />
     <file path="/welcome_view.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366634269973" ignored="false" />
     <file path="/login.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366692095252" ignored="false" />
-    <file path="/lucrari.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366961553932" ignored="false" />
+    <file path="/lucrari.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367926883498" ignored="false" />
     <file path="/dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367222147585" ignored="false" />
     <file path="/adauga_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366977431693" ignored="false" />
     <file path="/bootstrap.css" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367316016683" ignored="false" />
-    <file path="/retetemodel.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366959332404" ignored="false" />
-    <file path="/salveaza_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367316501875" ignored="false" />
+    <file path="/retetemodel.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367928607573" ignored="false" />
+    <file path="/salveaza_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367926650573" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367959720418" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,77 +48,88 @@
     <favorites_list name="EvidentaMedicala" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.64262563">
+    <splitter split-orientation="horizontal" split-proportion="0.5324149">
       <split-first>
-        <leaf>
-          <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="64" column="68" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="285" column="0" selection-start="11460" selection-end="11460" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="salveaza_reteta.php" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="43" column="98" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.63909775">
-                  <folding>
-                    <element signature="e#2028#2048#0" expanded="true" />
-                    <element signature="e#2800#2822#0" expanded="true" />
-                    <element signature="e#6385#6407#0" expanded="true" />
-                    <element signature="e#8560#8582#0" expanded="true" />
-                    <element signature="e#9881#9906#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="lucrari.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="286" column="73" selection-start="10416" selection-end="10416" vertical-scroll-proportion="-19.615385">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="95" column="26" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="commentsmodel.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="9" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.56207675">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="301" column="0" selection-start="12047" selection-end="12047" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="48" column="36" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="commentsmodel.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="16" column="11" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="lucrari.php" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="276" column="31" selection-start="8919" selection-end="8919" vertical-scroll-proportion="0.38202247">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="salveaza_reteta.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="118" column="91" selection-start="8976" selection-end="8988" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="64" column="25" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.048158642">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-first>
       <split-second>
         <leaf>
           <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="254" column="46" selection-start="9681" selection-end="9681" vertical-scroll-proportion="0.9380316">
+                <state line="206" column="23" selection-start="7869" selection-end="7869" vertical-scroll-proportion="0.020118343">
                   <folding />
                 </state>
               </provider>
@@ -124,6 +144,15 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -134,24 +163,24 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/application/views/add_lucrari_view.php" />
         <option value="$PROJECT_DIR$/system/language/english/form_validation_lang.php" />
-        <option value="$PROJECT_DIR$/application/models/retetemodel.php" />
         <option value="$PROJECT_DIR$/application/views/adauga_reteta.php" />
         <option value="$PROJECT_DIR$/application/controllers/login.php" />
-        <option value="$PROJECT_DIR$/application/controllers/lucrari.php" />
         <option value="$PROJECT_DIR$/css/bootstrap/bootstrap.css" />
-        <option value="$PROJECT_DIR$/application/views/templates/header.php" />
         <option value="$PROJECT_DIR$/application/views/salveaza_reteta.php" />
+        <option value="$PROJECT_DIR$/application/models/retetemodel.php" />
+        <option value="$PROJECT_DIR$/application/controllers/lucrari.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/header.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1276" />
-    <option name="y" value="-4" />
-    <option name="width" value="1288" />
-    <option name="height" value="1032" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -177,6 +206,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,16 +349,32 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_93e8418133eb85e81a81e5e19c272776524496c6/bin/git.exe" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="133" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="125" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -348,6 +394,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fe45f60d-99ff-4abe-a080-38fc83518b39" name="Default" comment="" />
@@ -357,19 +420,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1276" y="-4" width="1288" height="1032" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22447325" sideWeight="0.8626126" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17502668" sideWeight="0.67142856" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -442,7 +505,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/lucrari.php</url>
-          <line>348</line>
+          <line>386</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/retetemodel.php</url>
@@ -454,16 +517,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.18935643" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/cauta_lucrari_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="132" selection-start="1837" selection-end="1843" vertical-scroll-proportion="0.36448598" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/lucrari_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="75" selection-start="226" selection-end="226" vertical-scroll-proportion="0.65384614" />
@@ -494,63 +547,65 @@
         <state line="37" column="73" selection-start="1974" selection-end="1974" vertical-scroll-proportion="-0.65384614" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="9" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="26" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="68" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="77" selection-start="1300" selection-end="1330" vertical-scroll-proportion="0.34962407" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="73" selection-start="10416" selection-end="10416" vertical-scroll-proportion="-19.615385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6520" column="1" selection-start="132988" selection-end="132988" vertical-scroll-proportion="0.63957596">
+        <state line="6520" column="1" selection-start="132988" selection-end="132988" vertical-scroll-proportion="0.63957596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/users_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
+    <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="0" selection-start="11460" selection-end="11460" vertical-scroll-proportion="0.0">
+        <state line="16" column="11" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="98" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.63909775">
-          <folding>
-            <element signature="e#2028#2048#0" expanded="true" />
-            <element signature="e#2800#2822#0" expanded="true" />
-            <element signature="e#6385#6407#0" expanded="true" />
-            <element signature="e#8560#8582#0" expanded="true" />
-            <element signature="e#9881#9906#0" expanded="true" />
-          </folding>
+        <state line="118" column="91" selection-start="8976" selection-end="8988" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="36" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="301" column="0" selection-start="12047" selection-end="12047" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="276" column="31" selection-start="8919" selection-end="8919" vertical-scroll-proportion="0.38202247">
+          <folding />
         </state>
       </provider>
     </entry>
