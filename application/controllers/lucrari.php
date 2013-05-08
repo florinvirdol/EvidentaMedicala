@@ -259,54 +259,40 @@ class Lucrari extends CI_Controller {
 
     /*function get_birds()
     {
-        $this->load->model('birds_model');
-        if (isset($_GET['term']))
+        $this->load->model('birds_model');
+        if (isset($_GET['term']))
         {
             $q = strtolower($_GET['term']);
-            $this->birds_model->get_bird($q);
-        }
+            $this->birds_model->get_bird($q);
+        }
     }*/
-    public function getMedicamenteNecompensate()
+    public function getMedicamenteNecompensate($param)
     {
         //TODO?? din js - dinamic, apelez functia de autocomplete pt fiecare input creat
         //  acolo pun in parametru si id-u'
 
         //??switch ce medicamente sa returneze: compens?necompens
 
-        //$input = $_GET['medicament_1'];
-		$input = $_GET['term'];
-		
-		//source: "lucrari/getMedicamenteNecompensate"
-		
-		//var_dump($_GET);
-		//var_dump($_POST);
-		
- 		//exit;
-		
-//        echo "CEVA!!1!!";
 
-//        var_dump($input);exit;
+        //!! param .. data??
+        if ($param)
+        {
+            //$input = $_GET['medicament_1'];
+            $input = $_GET['term'];
+        }
 
         if (isset($input))
         {
             $input = strtolower($input);
             $this->retetemodel->getMedicamente($input);
         }
-/*        if (isset($_GET['term']))
-        {
-            $q = strtolower($_GET['term']);
-            $this->retetemodel->getMedicamente($q);
-        }*/
     }
-
 
 //    function adauga_reteta()
 //    function inregistreazaReteta()
     public function salveazaReteta()
     {
-        $this->load->library('form_validation');
 
-        $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
         /*$this->form_validation->set_message('exact_length', 'Campul %s nu are lungimea necesara!');
         $this->form_validation->set_message('numeric', 'Campul %s trebuie sa aiba doar cifre!');
@@ -315,6 +301,12 @@ class Lucrari extends CI_Controller {
 
 
 //        $this->form_validation->set_rules('username', 'Username', 'required');
+
+        /*$this->load->library('form_validation');
+
+        $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+
+
         $this->form_validation->set_rules('tip_reteta', 'Tip Rețetă', 'required');
         $this->form_validation->set_rules('farmacie', 'Farmacie', 'required');
         //??? verificare conditionata!!
@@ -331,7 +323,7 @@ class Lucrari extends CI_Controller {
         $this->form_validation->set_rules('cnp_pacient', 'CNP', 'required|exact_length[13]|numeric');
         $this->form_validation->set_rules('nume_pacient', 'Nume', 'required|alpha');//??
         $this->form_validation->set_rules('prenume_pacient', 'Prenume', 'required|alpha');//???
-        $this->form_validation->set_rules('medicament_1', 'Medicament 1', 'required');
+        $this->form_validation->set_rules('medicament_1', 'Medicament 1', 'required');*/
 
 
 
@@ -349,6 +341,45 @@ class Lucrari extends CI_Controller {
         {
             //A completat, da Inregistrare -> validare -> INSERT DB
 
+
+            $this->load->library('form_validation');
+
+            $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+
+
+            $this->form_validation->set_rules('tip_reteta', 'Tip Rețetă', 'required');
+            $this->form_validation->set_rules('farmacie', 'Farmacie', 'required');
+
+            //????
+            $this->form_validation->set_rules('data_eliberare_reteta', 'Data Eliberare Rețetă', 'required|exact_length[10]');//???
+
+            $this->form_validation->set_rules('nr_fisa_pacient', 'Nr. Fișă Pacient', 'required');
+            $this->form_validation->set_rules('nr_registru_consultatii', 'Nr. Registru Consultații', 'required');
+            $this->form_validation->set_rules('nr_dosar', 'Nume Dosar', 'required');
+            $this->form_validation->set_rules('nume_doctor', 'Nume Doctor', 'required');
+            $this->form_validation->set_rules('cnp_pacient', 'CNP', 'required|exact_length[13]|numeric');
+
+            //???
+            $this->form_validation->set_rules('nume_pacient', 'Nume', 'required|alpha');//??
+            $this->form_validation->set_rules('prenume_pacient', 'Prenume', 'required|alpha');//???
+
+//            $this->form_validation->set_rules('medicament_1', 'Medicament 1', 'required');
+
+
+            if ($_POST["tip_reteta"])
+            {
+                //compensata
+
+                //??? verificare conditionata!!
+                $this->form_validation->set_rules('serie_reteta_compensata', 'Serie Rețetă Compensată', 'required');
+                $this->form_validation->set_rules('nr_reteta_compensata', 'Nr. Rețetă Compensată', 'required');
+            }
+
+            //foreach medicamente.... add rules?? sau le las asa, ca oricum sunt conditionate din JS!
+//            $this->form_validation->set_rules('medicament_1', 'Medicament 1', 'required');
+
+
+
 //            if ($this->form_validation->run() == FALSE)
             if ($this->form_validation->run())
             {
@@ -356,6 +387,9 @@ class Lucrari extends CI_Controller {
                 //INSERT
 
                 echo "success";
+
+                var_dump($_REQUEST);exit;//!!!!!!!!
+
 //                $this->load->view('formsuccess');
 
 //                $this->load->model('retetemodel');//??????constructor!!
@@ -373,9 +407,15 @@ class Lucrari extends CI_Controller {
             {
                 //error
 
-//                echo "error";
+                echo "error";
+
+                var_dump($_REQUEST);
+
+
 //                $this->load->view('myform');
                 $this->load->view('salveaza_reteta', $data);
+
+//                exit;//!!!!!!!!
             }
         }
         else
