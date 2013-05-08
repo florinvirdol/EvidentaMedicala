@@ -36,12 +36,51 @@ class Retetemodel extends CI_Model
         $pret = "";
 
         $data_medicament_reteta = array(
-                                            'id_reteta' => $id_reteta,
-                                            'id_medicament' => $id_medicament,
-                                            'pret' => $pret
-                                );
+            'id_reteta' => $id_reteta,
+            'id_medicament' => $id_medicament,
+            'pret' => $pret
+        );
 
         $this->db->insert('medicamente_retete', $data_medicament_reteta);
+    }
+
+    /*function get_bird($q){
+        $this->db->select('*');
+        $this->db->like('bird', $q);
+        $query = $this->db->get('birds');
+        if($query->num_rows > 0){
+            foreach ($query->result_array() as $row){
+                $new_row['label']=htmlentities(stripslashes($row['bird']));
+                $new_row['value']=htmlentities(stripslashes($row['aka']));
+                $row_set[] = $new_row; //build an array
+            }
+            echo json_encode($row_set); //format the array into json data
+        }
+    }*/
+//    public function getMedicamenteNecompensate($input)
+    public function getMedicamente($input)
+    {
+        $results = $this->db->select('*')->like('nume_medicament', $input, 'after')->get('medicamente_nomenclatoare');
+
+        if ($results->num_rows)
+        {
+            foreach ($results->result_array() as $row)
+            {
+                //ce afiseaza in lista de sugestii
+                $new_row['label'] = htmlentities(stripslashes($row['nume_medicament']));
+
+                //ce baga in input cand se selecteaza  o sugestie
+                $new_row['value'] = htmlentities(stripslashes($row['nume_medicament']));//??nume?
+
+                $new_row['id'] = htmlentities(stripslashes($row['id']));//??nume?
+
+                //build an array
+                $row_set[] = $new_row;
+            }
+
+            //format the array into json data
+            echo json_encode($row_set);
+        }
     }
 
     public function adaugaReteta()
@@ -69,25 +108,25 @@ class Retetemodel extends CI_Model
 //        $validitate = $_POST["?null?"];
         $nr_din_dosar = $_POST["nr_reteta_dosar"];
 
-        var_dump($_REQUEST);exit;
+        var_dump($_REQUEST);exit;//!!!!!!!!
 
         $data_reteta = array(
-                    //            'id' => AutoIncrement,
-                                'id_doctor' => $id_doctor,
-                                'id_utilizator' => $id_utilizator,
-                                'id_pacient' => $id_pacient,//???
-                                'id_farmacie' => $id_farmacie,
-                                'id_motive' => $id_motive,
-                                'id_dosar' => $id_dosar,
-                                'tip' => $tip,
-                                'data_reteta' => $data_reteta,
-                                'nr_fisa_inregistrare' => $nr_fisa_inregistrare,
-                                'nr_registru_consultatii' => $nr_registru_consultatii,
-                                'serie_reteta_compensata' => $serie_reteta_compensata,
-                                'nr_reteta_compensata' => $nr_reteta_compensata,
-                                'validitate' => $validitate,
-                                'nr_din_dosar' => $nr_din_dosar
-                            );
+            //            'id' => AutoIncrement,
+            'id_doctor' => $id_doctor,
+            'id_utilizator' => $id_utilizator,
+            'id_pacient' => $id_pacient,//???
+            'id_farmacie' => $id_farmacie,
+            'id_motive' => $id_motive,
+            'id_dosar' => $id_dosar,
+            'tip' => $tip,
+            'data_reteta' => $data_reteta,
+            'nr_fisa_inregistrare' => $nr_fisa_inregistrare,
+            'nr_registru_consultatii' => $nr_registru_consultatii,
+            'serie_reteta_compensata' => $serie_reteta_compensata,
+            'nr_reteta_compensata' => $nr_reteta_compensata,
+            'validitate' => $validitate,
+            'nr_din_dosar' => $nr_din_dosar
+        );
         $this->db->insert('retete', $data_reteta);
 
 //        $id = $this->db->select('id')->from('comments')->where('nr_intern', $text)->get()->row(0)->id;

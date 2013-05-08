@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2013 at 06:44 PM
+-- Generation Time: May 08, 2013 at 12:51 PM
 -- Server version: 5.1.49-3
 -- PHP Version: 5.3.3-7+squeeze14
 
@@ -99,7 +99,15 @@ CREATE TABLE IF NOT EXISTS `medicamente_nomenclatoare` (
   `data` date NOT NULL,
   `tip` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `medicamente_nomenclatoare`
+--
+
+INSERT INTO `medicamente_nomenclatoare` (`id`, `nume_medicament`, `data`, `tip`) VALUES
+(1, 'nume_med1', '0000-00-00', 0),
+(2, 'nume_med2', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
