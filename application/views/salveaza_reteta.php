@@ -7,6 +7,12 @@
 
             <?php echo validation_errors(); ?>
 
+            <div id="errorContainer">
+                <p>Please correct the following errors and try again:</p>
+                <ul />
+            </div>
+
+
             <!--            --><?php //echo form_open('lucrari/adauga_reteta'); ?>
             <?php
             $attributes = array('id' => 'salveazaRetetaForm');
@@ -83,11 +89,11 @@
                 <fieldset id="info_pacienti" class="info_reteta">
                     <legend>Pacient</legend>
                     <label for="cnp_pacient">CNP</label>
-                    <input type="text" name="cnp_pacient" value="<?=set_value('cnp_pacient')?>" class="<?=form_error('cnp_pacient') ? "error" : ""?>">
+                    <input type="text" name="cnp_pacient" value="<?=set_value('cnp_pacient')?>" class="<?=form_error('cnp_pacient') ? "error" : "nr"?>">
                     <label for="nume_pacient">Nume</label>
-                    <input type="text" name="nume_pacient" value="<?=set_value('nume_pacient')?>" class="<?=form_error('nume_pacient') ? "error" : ""?>">
+                    <input type="text" name="nume_pacient" value="<?=set_value('nume_pacient')?>" class="<?=form_error('nume_pacient') ? "error" : "lit"?>">
                     <label for="prenume_pacient">Prenume</label>
-                    <input type="text" name="prenume_pacient" value="<?=set_value('prenume_pacient')?>" class="<?=form_error('prenume_pacient') ? "error" : ""?>">
+                    <input type="text" name="prenume_pacient" value="<?=set_value('prenume_pacient')?>" class="<?=form_error('prenume_pacient') ? "error" : "lit"?>">
                 </fieldset>
                 <fieldset id="info_medicamente" class="info_reteta">
                     <legend>Medicamente</legend>
@@ -97,14 +103,14 @@
                                 <legend>Medicament 1</legend>
                                 <input type="hidden" id="hidden_id_medicament_c_1" name="hidden_id_medicament_c_1">
                                 <label for="international_medicament_c_1">Nume Internațional</label>
-                                <input type="text" name="international_medicament_c_1" value="<?=set_value('international_medicament_c_1')?>" class="<?=form_error('international_medicament_c_1') ? "error" : "autocomplete"?>">
+                                <input type="text" name="international_medicament_c_1" value="<?=set_value('international_medicament_c_1')?>" class="<?=form_error('international_medicament_c_1') ? "error" : "autocomplete lit"?>">
                                 <label for="comercial_medicament_c_1">Nume Comercial</label>
-                                <input type="text" name="comercial_medicament_c_1" value="<?=set_value('comercial_medicament_c_1')?>" class="<?=form_error('comercial_medicament_c_1') ? "error" : ""?>">
+                                <input type="text" name="comercial_medicament_c_1" value="<?=set_value('comercial_medicament_c_1')?>" class="<?=form_error('comercial_medicament_c_1') ? "error" : "lit"?>">
                                 <br>
                                 <label for="val_amanunt_medicament_c_1">Valoare Amanunt</label>
-                                <input type="text" name="val_amanunt_medicament_c_1" value="<?=set_value('val_amanunt_medicament_c_1')?>" class="<?=form_error('val_amanunt_medicament_c_1') ? "error" : ""?>">
+                                <input type="text" name="val_amanunt_medicament_c_1" value="<?=set_value('val_amanunt_medicament_c_1')?>" class="<?=form_error('val_amanunt_medicament_c_1') ? "error" : "nr"?>">
                                 <label for="val_compensat_medicament_c_1">Valoare Compensat</label>
-                                <input type="text" name="val_compensat_medicament_c_1" value="<?=set_value('val_compensat_medicament_c_1')?>" class="<?=form_error('val_compensat_medicament_c_1') ? "error" : ""?>">
+                                <input type="text" name="val_compensat_medicament_c_1" value="<?=set_value('val_compensat_medicament_c_1')?>" class="<?=form_error('val_compensat_medicament_c_1') ? "error" : "nr"?>">
                                 <br>
                             </fieldset>
                         </div>
@@ -118,9 +124,9 @@
                                 <legend>Medicament 1</legend>
                                 <input type="hidden" id="hidden_id_medicament_nc_1" name="hidden_id_medicament_nc_1">
                                 <label for="medicament_nc_1">Nume Comercial</label>
-                                <input type="text" name="medicament_nc_1" id="medicament_nc_1" value="<?=set_value('medicament_nc_1')?>" class="<?=form_error('medicament_nc_1') ? "error" : "autocomplete"?>">
+                                <input type="text" name="medicament_nc_1" id="medicament_nc_1" value="<?=set_value('medicament_nc_1')?>" class="<?=form_error('medicament_nc_1') ? "error" : "autocomplete lit"?>">
                                 <label for="val_medicament_nc_1">Valoare</label>
-                                <input type="text" name="val_medicament_nc_1" value="<?=set_value('val_medicament_nc_1')?>" class="<?=form_error('val_medicament_nc_1') ? "error" : ""?>">
+                                <input type="text" name="val_medicament_nc_1" value="<?=set_value('val_medicament_nc_1')?>" class="<?=form_error('val_medicament_nc_1') ? "error" : "nr"?>">
                                 <br>
                             </fieldset>
                         </div>

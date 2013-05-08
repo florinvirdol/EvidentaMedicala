@@ -6517,10 +6517,28 @@ select.error, label.error {
     background-color: #f2dede;
     border-color: red;
 }
+/*label.error {
+    display:block;
+    white-space: pre-wrap;
+}*/
 input.error
 {
     background-color: red !important;
 }
+
+#errorContainer {
+    display: none;
+    overflow: auto;
+    background-color: #FFDDDD;
+    border: 1px solid #FF2323;
+    padding-top: 0;
+}
+
+#errorContainer label {
+    float: none;
+    width: auto;
+}
+
 /*#form_content input.eroare
 {
     background-color: red !important;
