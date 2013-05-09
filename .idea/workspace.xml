@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe45f60d-99ff-4abe-a080-38fc83518b39" name="Default" comment="miercuri.08: &#10;++ autocomplete&#10;++ add_form&#10;++">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/css/bootstrap/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/header.php" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/lucrari.php" afterPath="$PROJECT_DIR$/application/controllers/lucrari.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/retetemodel.php" afterPath="$PROJECT_DIR$/application/models/retetemodel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/salveaza_reteta.php" afterPath="$PROJECT_DIR$/application/views/salveaza_reteta.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EvidentaMedicala.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/header.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368050705636" ignored="false" />
+    <file path="/header.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368098885069" ignored="false" />
     <file path="/footer.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366633110161" ignored="false" />
     <file path="/login_view.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366633443197" ignored="false" />
     <file path="/a.dummy" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368044300115" ignored="false" />
@@ -19,9 +21,9 @@
     <file path="/dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368006161393" ignored="false" />
     <file path="/adauga_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366977431693" ignored="false" />
     <file path="/bootstrap.css" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368043802935" ignored="false" />
-    <file path="/retetemodel.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367928607573" ignored="false" />
-    <file path="/salveaza_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1367997934957" ignored="false" />
-    <file path="/Dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368040136793" ignored="false" />
+    <file path="/retetemodel.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368096978344" ignored="false" />
+    <file path="/salveaza_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368098744155" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368075105629" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,55 +47,15 @@
     <favorites_list name="EvidentaMedicala" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36926362">
+    <splitter split-orientation="horizontal" split-proportion="0.51863855">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.56207675">
+        <splitter split-orientation="vertical" split-proportion="0.7601351">
           <split-first>
             <leaf>
               <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="509" column="13" selection-start="17977" selection-end="17977" vertical-scroll-proportion="-0.65384614">
-                      <folding>
-                        <marker date="1368050825856" expanded="true" signature="7018:14235" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="7032:7150" placeholder="/*...*/" />
-                        <marker date="1368050825856" expanded="true" signature="7326:8018" placeholder="//..." />
-                        <marker date="1368050825856" expanded="true" signature="8138:8789" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="8273:8771" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="8386:8731" placeholder="{&quot;required&quot;: true...}" />
-                        <marker date="1368050825856" expanded="true" signature="8502:8701" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="9075:9485" placeholder="/*...*/" />
-                        <marker date="1368050825856" expanded="true" signature="9488:10296" placeholder="/*...*/" />
-                        <marker date="1368050825856" expanded="true" signature="10311:10424" placeholder="//..." />
-                        <marker date="1368050825856" expanded="true" signature="10967:11878" placeholder="{&quot;wrapper&quot;: 'li'...}" />
-                        <marker date="1368050825856" expanded="true" signature="14289:14947" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="14340:14935" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="14539:14921" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="14721:14902" placeholder="//..." />
-                        <marker date="1368050825856" expanded="true" signature="14999:15596" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="15040:15586" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="15661:17356" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="15788:15892" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="17252:17346" placeholder="//..." />
-                        <marker date="1368050825856" expanded="true" signature="17366:17764" placeholder="/*...*/" />
-                        <marker date="1368050825856" expanded="true" signature="17828:18507" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="17869:17963" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="17993:18090" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="18137:18241" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="18282:18361" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="18391:18471" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="18562:19647" placeholder="{...}" />
-                        <marker date="1368050825856" expanded="true" signature="18658:18795" placeholder="/*...*/" />
-                        <marker date="1368050825856" expanded="true" signature="19657:19720" placeholder="/*...*/" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="lucrari.php" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="353" column="111" selection-start="12196" selection-end="12201" vertical-scroll-proportion="-1.7254902">
+                    <state line="517" column="13" selection-start="19133" selection-end="19133" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -111,7 +73,7 @@
               <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="71" column="0" selection-start="2207" selection-end="2207" vertical-scroll-proportion="0.0">
+                    <state line="57" column="0" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -120,10 +82,17 @@
               <file leaf-file-name="salveaza_reteta.php" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="39" column="26" selection-start="1907" selection-end="1907" vertical-scroll-proportion="0.63484484">
-                      <folding>
-                        <element signature="e#10098#10123#0" expanded="true" />
-                      </folding>
+                    <state line="155" column="36" selection-start="11557" selection-end="11557" vertical-scroll-proportion="0.8095238">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="lucrari.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="393" column="66" selection-start="13971" selection-end="13971" vertical-scroll-proportion="-1.0">
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -135,7 +104,7 @@
               <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="91" column="14" selection-start="2857" selection-end="2859" vertical-scroll-proportion="0.33333334">
+                    <state line="139" column="0" selection-start="4677" selection-end="4677" vertical-scroll-proportion="1.9432625">
                       <folding />
                     </state>
                   </provider>
@@ -150,7 +119,36 @@
           <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="321" column="0" selection-start="10903" selection-end="10903" vertical-scroll-proportion="0.3024911">
+                <state line="485" column="39" selection-start="17455" selection-end="17455" vertical-scroll-proportion="0.42394015">
+                  <folding>
+                    <element signature="e#15207#15804#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="log-2013-05-09.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-09.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3" column="24" selection-start="377" selection-end="377" vertical-scroll-proportion="-1.9615384">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/config/database.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="38" column="3" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-9.615385">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="form_validation_lang.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/language/english/form_validation_lang.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="41" column="15" selection-start="2816" selection-end="2816" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -161,26 +159,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state line="6527" column="0" selection-start="133095" selection-end="133095" vertical-scroll-proportion="0.0">
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="log-2013-05-08.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-08.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="-2.6153846">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="form_validation_lang.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/language/english/form_validation_lang.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="41" column="15" selection-start="2816" selection-end="2816" vertical-scroll-proportion="-23.115385">
-                  <folding>
-                    <element signature="e#7#1642#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -209,15 +187,15 @@
         <option value="$PROJECT_DIR$/application/views/templates/footer.php" />
         <option value="$PROJECT_DIR$/application/views/login_view.php" />
         <option value="$PROJECT_DIR$/application/views/welcome_view.php" />
-        <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/application/views/add_lucrari_view.php" />
         <option value="$PROJECT_DIR$/system/language/english/form_validation_lang.php" />
         <option value="$PROJECT_DIR$/application/views/adauga_reteta.php" />
         <option value="$PROJECT_DIR$/application/controllers/login.php" />
-        <option value="$PROJECT_DIR$/application/models/retetemodel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/lucrari.php" />
         <option value="$PROJECT_DIR$/css/bootstrap/bootstrap.css" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/controllers/lucrari.php" />
+        <option value="$PROJECT_DIR$/application/models/retetemodel.php" />
         <option value="$PROJECT_DIR$/application/views/salveaza_reteta.php" />
         <option value="$PROJECT_DIR$/application/views/templates/header.php" />
       </list>
@@ -225,10 +203,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="1276" />
+    <option name="y" value="-4" />
+    <option name="width" value="1288" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -256,6 +234,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -414,9 +393,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EvidentaMedicala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EvidentaMedicala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,21 +424,21 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_93e8418133eb85e81a81e5e19c272776524496c6/bin/git.exe" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="133" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="125" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -497,24 +493,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1276" y="-4" width="1288" height="1032" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42070484" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42004505" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3094984" sideWeight="0.57929516" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6711712" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -586,21 +582,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/add_lucrari_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="102" selection-start="13177" selection-end="13177" vertical-scroll-proportion="-11.961538" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/lucrarimodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="73" selection-start="1974" selection-end="1974" vertical-scroll-proportion="-0.65384614" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="77" selection-start="1300" selection-end="1330" vertical-scroll-proportion="0.34962407" />
@@ -631,15 +612,13 @@
     <entry file="file://$PROJECT_DIR$/application/views/detaliere_lucrare_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="300" column="115" selection-start="25180" selection-end="25180" vertical-scroll-proportion="0.33251834">
-          <folding>
-            <marker date="1365509052110" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-08.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="-2.6153846">
+        <state line="4" column="0" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -653,40 +632,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/system/language/english/form_validation_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="15" selection-start="2816" selection-end="2816" vertical-scroll-proportion="-23.115385">
-          <folding>
-            <element signature="e#7#1642#0" expanded="true" />
-          </folding>
+        <state line="41" column="15" selection-start="2816" selection-end="2816" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="3" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-9.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="709" column="17" selection-start="10585" selection-end="10585" vertical-scroll-proportion="0.33294663">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2207" selection-end="2207" vertical-scroll-proportion="0.0">
+        <state line="57" column="0" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="353" column="111" selection-start="12196" selection-end="12201" vertical-scroll-proportion="-1.7254902">
+        <state line="393" column="66" selection-start="13971" selection-end="13971" vertical-scroll-proportion="-1.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-09.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="377" selection-end="377" vertical-scroll-proportion="-1.9615384">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="26" selection-start="1907" selection-end="1907" vertical-scroll-proportion="0.63484484">
-          <folding>
-            <element signature="e#10098#10123#0" expanded="true" />
-          </folding>
+        <state line="155" column="36" selection-start="11557" selection-end="11557" vertical-scroll-proportion="0.8095238">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="321" column="0" selection-start="10903" selection-end="10903" vertical-scroll-proportion="0.3024911">
-          <folding />
+        <state line="485" column="39" selection-start="17455" selection-end="17455" vertical-scroll-proportion="0.42394015">
+          <folding>
+            <element signature="e#15207#15804#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -379,28 +379,20 @@ class Lucrari extends CI_Controller {
 //            $this->form_validation->set_rules('medicament_1', 'Medicament 1', 'required');
 
 
-
 //            if ($this->form_validation->run() == FALSE)
             if ($this->form_validation->run())
             {
                 //success
                 //INSERT
 
-                echo "success";
+//                echo "success";
 
-                var_dump($_REQUEST);exit;//!!!!!!!!
-
-//                $this->load->view('formsuccess');
-
-//                $this->load->model('retetemodel');//??????constructor!!
-
+//                var_dump($_REQUEST);exit;//!!!!!!!!
 
                 //if.... insert    else    update
 
-
-//                $id_comentariu = $this->retetemodel->adaugaReteta($id_lucrare);//pt celelalte tabele
 //                $id_reteta = $this->retetemodel->adaugaReteta();
-                $id_reteta = $this->retetemodel->inregistreazaReteta();
+                $this->retetemodel->inregRetetaSiMedicamente();
 
             }
             else

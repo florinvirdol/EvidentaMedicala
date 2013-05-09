@@ -30,20 +30,6 @@ class Retetemodel extends CI_Model
         return isset($comment_obj_result) ? $comment_obj_result : null;
     }
 
-    public function adaugaMedicamentReteta($id_reteta)
-    {
-        $id_medicament = "";
-        $pret = "";
-
-        $data_medicament_reteta = array(
-            'id_reteta' => $id_reteta,
-            'id_medicament' => $id_medicament,
-            'pret' => $pret
-        );
-
-        $this->db->insert('medicamente_retete', $data_medicament_reteta);
-    }
-
     /*function get_bird($q){
         $this->db->select('*');
         $this->db->like('bird', $q);
@@ -83,49 +69,52 @@ class Retetemodel extends CI_Model
         }
     }
 
-    public function adaugaReteta()
+    public function insertReteta()
     {
         //?? e null in session pt Secretariat!!! ????
 //        $id_sender = $_SESSION['id_lucrator'];
 
-//        $ids_implicati = $_SESSION['ids_implicati'];
-//        $text = $_POST['comment'];
-
-        $id_doctor = $_POST["nume_doctor"];
         $id_utilizator = $_SESSION['user_id'];
-        $id_pacient = $_POST["nume_doctor"];
+        $id_doctor = $_POST["nume_doctor"];
         $id_farmacie = $_POST["farmacie"];
-//        $id_motive = $_POST["?null?"];
-        $id_dosar = $_POST["???"];
+        $nr_dosar = $_POST["nr_dosar"];//!!
+
+//Pacient : cnp, nume prenume ??
+//        $id_pacient = $_POST["__pacient"];
+
+//        $cnp_pacient = $_POST["cnp_pacient"];
+//        $nume_pacient = $_POST["nume_pacient"];
+//        $prenume_pacient = $_POST["prenume_pacient"];
+
         $tip = $_POST["tip_reteta"];
         $data_reteta = $_POST["data_eliberare_reteta"];
-        $nr_fisa_inregistrare = $_POST["nume_doctor"];
+        $nr_fisa_pacient = $_POST["nr_fisa_pacient"];
         $nr_registru_consultatii = $_POST["nr_registru_consultatii"];
 
         $serie_reteta_compensata = $_POST["serie_reteta_compensata"];
         $nr_reteta_compensata = $_POST["nr_reteta_compensata"];
 
-//        $validitate = $_POST["?null?"];
-        $nr_din_dosar = $_POST["nr_reteta_dosar"];
+        $validitate = "-1";//!nu a fost inca vertificata ... validata!
+
+//        $id_motive = $_POST["?null?"];
 
         var_dump($_REQUEST);exit;//!!!!!!!!
 
         $data_reteta = array(
             //            'id' => AutoIncrement,
-            'id_doctor' => $id_doctor,
             'id_utilizator' => $id_utilizator,
-            'id_pacient' => $id_pacient,//???
+            'id_doctor' => $id_doctor,
             'id_farmacie' => $id_farmacie,
-            'id_motive' => $id_motive,
-            'id_dosar' => $id_dosar,
+//            'id_pacient' => $id_pacient,//???
+            'nr_dosar' => $nr_dosar,
             'tip' => $tip,
             'data_reteta' => $data_reteta,
-            'nr_fisa_inregistrare' => $nr_fisa_inregistrare,
+            'nr_fisa_pacient' => $nr_fisa_pacient,
             'nr_registru_consultatii' => $nr_registru_consultatii,
             'serie_reteta_compensata' => $serie_reteta_compensata,
             'nr_reteta_compensata' => $nr_reteta_compensata,
             'validitate' => $validitate,
-            'nr_din_dosar' => $nr_din_dosar
+//            'id_motive' => $id_motive,
         );
         $this->db->insert('retete', $data_reteta);
 
@@ -135,17 +124,42 @@ class Retetemodel extends CI_Model
         return $id_reteta;
     }
 
-    public function inregistreazaReteta()
+    public function insertMedicamentReteta($id_reteta)
     {
-        $id_reteta = $this->adaugaReteta();
+        //CUM FAC FLEXIBIL??? pT MAI MULTE MEDICAMENTE???
 
-        $this->adaugaMedicamentReteta($id_reteta);
+        //cel din nomenclatoare??
+        //cel din hidden-uri
+        $id_medicament = $_POST[""];
 
-        //dosar
+        //fctie separata, sau mai degraba mai fac un hidden, si incerc sa il obtin atunci!!
+        $id_nomenclator = "";
 
         //
-//return
+        $val_amanunt = "";
 
+        //if med necompensat = 0, else.. POST
+        $val_compensat = "";
+
+        $val_decont = $val_amanunt - $val_compensat;
+
+        $data_medicament_reteta = array(
+            'id_reteta' => $id_reteta,
+            'id_medicament' => $id_medicament,
+            'id_nomenclator' => $id_nomenclator,
+            'valoare_amanunt' => $val_amanunt,
+            'valoare_compensat' => $val_compensat,
+            'valoare_decont' => $val_decont
+        );
+
+        $this->db->insert('medicamente_retete', $data_medicament_reteta);
+    }
+
+    public function inregRetetaSiMedicamente()
+    {
+        $id_reteta = $this->insertReteta();
+
+        $this->insertMedicamentReteta($id_reteta);
     }
 }
 ?>

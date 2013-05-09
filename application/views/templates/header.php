@@ -237,27 +237,14 @@ if ($whereiam == 'salveazaReteta')
 
             inputs_autocomplete();
 
-
-
-
             $('#salveazaRetetaForm').on('submit', function(event)
             {
                 // adding rules for inputs with class 'comment'
-                /*$('input, select').each(function()
-                {
-                    $(this).rules
-                    (
-                        "add",
-                        {
-                            required: true*//*,
-                            messages:
-                            {
-                                required: " ! "
-//                                required: "Campul " + $(this).attr("name") + " este obligatoriu și trebuie completat"
-                            }*//*
-                        }
-                    )
-                });*/
+                ruleRequiredInputSelect();
+
+                ruleNrInput();
+
+                ruleLitInput();
             });
 
             //TODO: !!! add rules..... independente??? pt fiecare camp?? numeric../ lenght
@@ -312,6 +299,16 @@ if ($whereiam == 'salveazaReteta')
 
             $.validator.addMethod
             (
+                "date_rgx",
+                function(value, element)
+                {
+                    return this.optional(element) || /^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/i.test(value);
+//                    return this.optional(element) || /^(19|20)$/i.test(value);
+                }
+            );
+
+            $.validator.addMethod
+            (
                 "lit",
                 function(value, element)
                 {
@@ -322,12 +319,13 @@ if ($whereiam == 'salveazaReteta')
 
             $("#salveazaRetetaForm").validate(
                 {
+                    //??rules: ?? nr fisa/registru/reteta/serie reteta??
+
                     rules:
                     {
-//                      d: date
                         data_eliberare_reteta:
                         {
-                            rangelength: [10, 10]
+                            date_rgx: true
                         },
                         cnp_pacient:
                         {
@@ -336,7 +334,7 @@ if ($whereiam == 'salveazaReteta')
                     },
                     messages:
                     {
-                        data_eliberare_reteta: "Campul Data Eliberare Rețetă trebuie sa fie o data valida! Apasati iconita din dreapta pt a selecta data!",
+                        date_rgx: "Campul Data Eliberare Rețetă nu e valid [AN-LUNA-ZI]! Apasati iconita din dreapta pt a selecta data!",
                         cnp_pacient: "Campul CNP Pacient trebuie sa fie valid si sa contina exact {1} cifre!"
                     },
                     errorContainer: $('#errorContainer'),
@@ -344,40 +342,6 @@ if ($whereiam == 'salveazaReteta')
                     wrapper: 'li'
                 }
             );
-
-
-            $('input, select').each(function()
-            {
-                $(this).rules
-                (
-                    "add",
-                    {
-                        required: [true, $(this).attr("name")]
-                    }
-                )
-            });
-
-            $('input.nr').each(function()
-            {
-                $(this).rules
-                (
-                    "add",
-                    {
-                        number: [true, $(this).attr("name")]
-                    }
-                )
-            });
-
-            $('input.lit').each(function()
-            {
-                $(this).rules
-                (
-                    "add",
-                    {
-                        lit: [true, $(this).attr("name")]
-                    }
-                )
-            });
 
 //            $.validator.messages.required = 'Campul  este obligatoriu și trebuie completat';
 
@@ -387,6 +351,7 @@ if ($whereiam == 'salveazaReteta')
                 email: "Please enter a valid email address.",
                 url: "Please enter a valid URL.",
                 date: "Please enter a valid date.",
+//                date_rgx: "Campul {1} nu e valid [AN-LUNA-ZI]! Apasati iconita din dreapta pt a selecta data!",
                 dateISO: "Please enter a valid date (ISO).",
                 lit: "Campul {1} trebuie să conțină doar litere!",
                 number: "Campul {1} trebuie să conțină doar cifre!",
@@ -403,9 +368,6 @@ if ($whereiam == 'salveazaReteta')
             });
 
         });
-
-
-
 
         function inputs_autocomplete()
         {
@@ -424,6 +386,48 @@ if ($whereiam == 'salveazaReteta')
                     // sa bage autocomplete si pt comerciala in functie de ce e la internatz
 
                 }
+            });
+        }
+
+        function ruleRequiredInputSelect()
+        {
+            $('input, select').each(function()
+            {
+                $(this).rules
+                (
+                    "add",
+                    {
+                        required: [true, $(this).attr("name")]
+                    }
+                )
+            });
+        }
+
+        function ruleNrInput()
+        {
+            $('input.nr').each(function()
+            {
+                $(this).rules
+                (
+                    "add",
+                    {
+                        number: [true, $(this).attr("name")]
+                    }
+                )
+            });
+        }
+
+        function ruleLitInput()
+        {
+            $('input.lit').each(function()
+            {
+                $(this).rules
+                (
+                    "add",
+                    {
+                        lit: [true, $(this).attr("name")]
+                    }
+                )
             });
         }
 
@@ -462,6 +466,25 @@ if ($whereiam == 'salveazaReteta')
                 return false;
             }
 
+            /*$("#medicamente_compensate").append(
+                '<fieldset id="info_medicament_c_' + contor_med + '">' +
+                    '<legend>Medicament ' + contor_med + '</legend>' +
+                    '<input type="hidden" name="hidden_id_medicament_c_' + contor_med + '" id="hidden_id_medicament_c_' + contor_med + '">' +
+                    '<label for="international_medicament_c_' + contor_med + '">Nume International</label>' +
+                    '<input type="text" name="international_medicament_c_' + contor_med + '" class="autocomplete lit">' +
+                    '<label for="comercial_medicament_c_' + contor_med + '">Nume Comercial</label>' +
+                    '<input type="text" name="comercial_medicament_c_' + contor_med + '" class="lit">' +
+                    '<br>' +
+                    '<label for="val_amanunt_medicament_c_' + contor_med + '">Valoare Amanunt</label>' +
+                    '<input type="text" name="val_amanunt_medicament_c_' + contor_med + '" class="nr">' +
+                    '<label for="val_compensat_medicament_c_' + contor_med + '">Valoare Compensat</label>' +
+                    '<input type="text" name="val_compensat_medicament_c_' + contor_med + '" class="nr">' +
+                    '<br>' +
+                    '</fieldset>'
+            );*/
+
+///se eroneaza js la click/scriere..tst
+
             $("#medicamente_compensate").append(
                 '<fieldset id="info_medicament_c_' + contor_med + '">' +
                     '<legend>Medicament ' + contor_med + '</legend>' +
@@ -479,27 +502,12 @@ if ($whereiam == 'salveazaReteta')
                     '</fieldset>'
             );
 
+
             inputs_autocomplete();
 
             //TODO:
             //autcomplete  ->   adauga_reteta/getMedicamentNomenclator/ _id___index??_
         }
-
-        /*function sterge_medicament_compensat_element()
-         {
-         var contor_med = $("#medicamente_compensate fieldset").length;
-
-         if (contor_med == 1)
-         {
-         alert("Trebuie cel putin un medicament!");
-         return false;
-         }
-
-         $("#info_medicament_" + contor_med).remove();
-         $("#info_doar_compensata").remove();
-
-         contor_med--;
-         }*/
 
         function sterge_medicament_element(compensat)
         {
@@ -534,13 +542,7 @@ if ($whereiam == 'salveazaReteta')
         {
             var contor_med = $("#medicamente_necompensate fieldset").length + 1;
 
-            /*if (contor_med == 8)
-             {
-             alert("Sunt permise doar 7 medicamente!");
-             return false;
-             }*/
-
-            $("#medicamente_necompensate").append(
+            /*$("#medicamente_necompensate").append(
                 '<fieldset id="info_medicament_nc_' + contor_med + '">' +
                     '<legend>Medicament ' + contor_med + '</legend>' +
                     '<input type="hidden" name="hidden_id_medicament_nc_' + contor_med + '" id="hidden_id_medicament_nc_' + contor_med + '">' +
@@ -550,15 +552,23 @@ if ($whereiam == 'salveazaReteta')
                     '<input type="text" name="val_medicament_nc_' + contor_med + '" class="nr">' +
                     '<br>' +
                 '</fieldset>'
+            );*/
+
+
+            $("#medicamente_necompensate").append(
+                '<fieldset id="info_medicament_nc_' + contor_med + '">' +
+                    '<legend>Medicament ' + contor_med + '</legend>' +
+                    '<input type="hidden" name="hidden_ids_medicamente_nc_[]" id="hidden_id_medicament_nc_' + contor_med + '">' +
+                    '<label for="medicamente_nc_[]">Nume Comercial</label>' +
+                    '<input type="text" name="medicamente_nc_[]" class="autocomplete lit">' +
+                    '<label for="vals_medicamente_nc_[]">Valoare</label>' +
+                    '<input type="text" name="vals_medicamente_nc_[]" class="nr">' +
+                    '<br>' +
+                '</fieldset>'
             );
 
             inputs_autocomplete();
         }
-
-        /*function sterge_medicament_element()
-         {
-
-         }*/
     </script>
 <?php
 }

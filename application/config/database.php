@@ -48,7 +48,8 @@ $active_record = TRUE;
 $db['default']['hostname'] = "localhost";
 
 $db['default']['username'] = "root";
-//$db['default']['password'] = "linux123";//
+//$db['default']['password'] = "linux123";//home
+$db['default']['password'] = "linux123";//mai.gov
 $db['default']['database'] = "evidenta_medicala";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = '';
