@@ -218,9 +218,9 @@ if ($whereiam == 'salveazaReteta')
 
         $(document).ready(function()
         {
-            /*$("#birds").autocomplete({
-             source: "birds/get_birds" // path to the get_birds method
-             });*/
+
+//            _cnpIfLenght==13=>ajax=>nume_prenume_cod_
+
 
             //TODO: lucrari -> retete : controller !!!
 
@@ -235,7 +235,7 @@ if ($whereiam == 'salveazaReteta')
 //http://jsfiddle.net/fU8hn/4/
 
 
-            inputs_autocomplete();
+            inputsAutocomplete();
 
             $('#salveazaRetetaForm').on('submit', function(event)
             {
@@ -245,6 +245,8 @@ if ($whereiam == 'salveazaReteta')
                 ruleNrInput();
 
                 ruleLitInput();
+
+                ruleNr_LitInput();
             });
 
             //TODO: !!! add rules..... independente??? pt fiecare camp?? numeric../ lenght
@@ -316,6 +318,14 @@ if ($whereiam == 'salveazaReteta')
                 }
             );
 
+            $.validator.addMethod
+            (
+                "nr_lit",
+                function(value, element)
+                {
+                    return this.optional(element) || /^[0-9a-zA-Z]+$/i.test(value);
+                }
+            );
 
             $("#salveazaRetetaForm").validate(
                 {
@@ -355,6 +365,7 @@ if ($whereiam == 'salveazaReteta')
                 dateISO: "Please enter a valid date (ISO).",
                 lit: "Campul {1} trebuie să conțină doar litere!",
                 number: "Campul {1} trebuie să conțină doar cifre!",
+                nr_lit: "Campul {1} trebuie să conțină doar litere si cifre!",
                 digits: "Please enter only digits.",
                 creditcard: "Please enter a valid credit card number.",
                 equalTo: "Please enter the same value again.",
@@ -369,7 +380,7 @@ if ($whereiam == 'salveazaReteta')
 
         });
 
-        function inputs_autocomplete()
+        function inputsAutocomplete()
         {
             $("input.autocomplete").autocomplete({
                 // path to the get_birds method
@@ -431,8 +442,24 @@ if ($whereiam == 'salveazaReteta')
             });
         }
 
+        function ruleNr_LitInput()
+        {
+            $('input.nr_lit').each(function()
+            {
+                $(this).rules
+                (
+                    "add",
+                    {
+                        nr_lit: [true, $(this).attr("name")]
+                    }
+                )
+            });
+        }
+
         function schimba_tip_retea(value)
         {
+            //TODO:!! pacient!!
+
             switch (value)
             {
                 case "0":
@@ -466,44 +493,24 @@ if ($whereiam == 'salveazaReteta')
                 return false;
             }
 
-            /*$("#medicamente_compensate").append(
-                '<fieldset id="info_medicament_c_' + contor_med + '">' +
-                    '<legend>Medicament ' + contor_med + '</legend>' +
-                    '<input type="hidden" name="hidden_id_medicament_c_' + contor_med + '" id="hidden_id_medicament_c_' + contor_med + '">' +
-                    '<label for="international_medicament_c_' + contor_med + '">Nume International</label>' +
-                    '<input type="text" name="international_medicament_c_' + contor_med + '" class="autocomplete lit">' +
-                    '<label for="comercial_medicament_c_' + contor_med + '">Nume Comercial</label>' +
-                    '<input type="text" name="comercial_medicament_c_' + contor_med + '" class="lit">' +
-                    '<br>' +
-                    '<label for="val_amanunt_medicament_c_' + contor_med + '">Valoare Amanunt</label>' +
-                    '<input type="text" name="val_amanunt_medicament_c_' + contor_med + '" class="nr">' +
-                    '<label for="val_compensat_medicament_c_' + contor_med + '">Valoare Compensat</label>' +
-                    '<input type="text" name="val_compensat_medicament_c_' + contor_med + '" class="nr">' +
-                    '<br>' +
-                    '</fieldset>'
-            );*/
-
-///se eroneaza js la click/scriere..tst
-
             $("#medicamente_compensate").append(
                 '<fieldset id="info_medicament_c_' + contor_med + '">' +
                     '<legend>Medicament ' + contor_med + '</legend>' +
-                    '<input type="hidden" name="hidden_id_medicament_c_' + contor_med + '" id="hidden_id_medicament_c_' + contor_med + '">' +
-                    '<label for="international_medicament_c_' + contor_med + '">Nume International</label>' +
-                    '<input type="text" name="international_medicament_c_' + contor_med + '" class="autocomplete lit">' +
-                    '<label for="comercial_medicament_c_' + contor_med + '">Nume Comercial</label>' +
-                    '<input type="text" name="comercial_medicament_c_' + contor_med + '" class="lit">' +
+                    '<input type="hidden" name="hidden_ids_medicamente_c_[' + contor_med + ']" id="hidden_id_medicament_c_' + contor_med + '">' +
+                    '<label for="international_medicamente_c_[' + contor_med + ']">Nume International</label>' +
+                    '<input type="text" name="international_medicamente_c_[' + contor_med + ']" class="autocomplete lit">' +
+                    '<label for="comercial_medicamente_c_[' + contor_med + ']">Nume Comercial</label>' +
+                    '<input type="text" name="comercial_medicamente_c_[' + contor_med + ']" class="lit">' +
                     '<br>' +
-                    '<label for="val_amanunt_medicament_c_' + contor_med + '">Valoare Amanunt</label>' +
-                    '<input type="text" name="val_amanunt_medicament_c_' + contor_med + '" class="nr">' +
-                    '<label for="val_compensat_medicament_c_' + contor_med + '">Valoare Compensat</label>' +
-                    '<input type="text" name="val_compensat_medicament_c_' + contor_med + '" class="nr">' +
+                    '<label for="vals_amanunt_medicamente_c_[' + contor_med + ']">Valoare Amanunt</label>' +
+                    '<input type="text" name="vals_amanunt_medicamente_c_[' + contor_med + ']" class="nr">' +
+                    '<label for="vals_compensat_medicamente_c_[' + contor_med + ']">Valoare Compensat</label>' +
+                    '<input type="text" name="vals_compensat_medicamente_c_[' + contor_med + ']" class="nr">' +
                     '<br>' +
-                    '</fieldset>'
+                '</fieldset>'
             );
 
-
-            inputs_autocomplete();
+            inputsAutocomplete();
 
             //TODO:
             //autcomplete  ->   adauga_reteta/getMedicamentNomenclator/ _id___index??_
@@ -542,32 +549,19 @@ if ($whereiam == 'salveazaReteta')
         {
             var contor_med = $("#medicamente_necompensate fieldset").length + 1;
 
-            /*$("#medicamente_necompensate").append(
-                '<fieldset id="info_medicament_nc_' + contor_med + '">' +
-                    '<legend>Medicament ' + contor_med + '</legend>' +
-                    '<input type="hidden" name="hidden_id_medicament_nc_' + contor_med + '" id="hidden_id_medicament_nc_' + contor_med + '">' +
-                    '<label for="medicament_nc_' + contor_med + '">Nume Comercial</label>' +
-                    '<input type="text" name="medicament_nc_' + contor_med + '" class="autocomplete lit">' +
-                    '<label for="val_medicament_nc_' + contor_med + '">Valoare</label>' +
-                    '<input type="text" name="val_medicament_nc_' + contor_med + '" class="nr">' +
-                    '<br>' +
-                '</fieldset>'
-            );*/
-
-
             $("#medicamente_necompensate").append(
                 '<fieldset id="info_medicament_nc_' + contor_med + '">' +
                     '<legend>Medicament ' + contor_med + '</legend>' +
-                    '<input type="hidden" name="hidden_ids_medicamente_nc_[]" id="hidden_id_medicament_nc_' + contor_med + '">' +
-                    '<label for="medicamente_nc_[]">Nume Comercial</label>' +
-                    '<input type="text" name="medicamente_nc_[]" class="autocomplete lit">' +
-                    '<label for="vals_medicamente_nc_[]">Valoare</label>' +
-                    '<input type="text" name="vals_medicamente_nc_[]" class="nr">' +
+                    '<input type="hidden" name="hidden_ids_medicamente_nc_[' + contor_med + ']" id="hidden_id_medicament_nc_' + contor_med + '">' +
+                    '<label for="medicamente_nc_[' + contor_med + ']">Nume Comercial</label>' +
+                    '<input type="text" name="medicamente_nc_[' + contor_med + ']" class="autocomplete lit">' +
+                    '<label for="vals_medicamente_nc_[' + contor_med + ']">Valoare</label>' +
+                    '<input type="text" name="vals_medicamente_nc_[' + contor_med + ']" class="nr">' +
                     '<br>' +
-                '</fieldset>'
+                    '</fieldset>'
             );
 
-            inputs_autocomplete();
+            inputsAutocomplete();
         }
     </script>
 <?php

@@ -98,7 +98,9 @@ class Retetemodel extends CI_Model
 
 //        $id_motive = $_POST["?null?"];
 
-        var_dump($_REQUEST);exit;//!!!!!!!!
+
+//        var_dump($_REQUEST);exit;//!!!!!!!!
+
 
         $data_reteta = array(
             //            'id' => AutoIncrement,
@@ -113,7 +115,7 @@ class Retetemodel extends CI_Model
             'nr_registru_consultatii' => $nr_registru_consultatii,
             'serie_reteta_compensata' => $serie_reteta_compensata,
             'nr_reteta_compensata' => $nr_reteta_compensata,
-            'validitate' => $validitate,
+            'validitate' => $validitate
 //            'id_motive' => $id_motive,
         );
         $this->db->insert('retete', $data_reteta);
@@ -124,23 +126,9 @@ class Retetemodel extends CI_Model
         return $id_reteta;
     }
 
-    public function insertMedicamentReteta($id_reteta)
+//    public function insertMedicamentReteta($id_reteta)
+    public function insertMedicamentReteta($id_reteta, $id_medicament, $id_nomenclator, $val_amanunt, $val_compensat)
     {
-        //CUM FAC FLEXIBIL??? pT MAI MULTE MEDICAMENTE???
-
-        //cel din nomenclatoare??
-        //cel din hidden-uri
-        $id_medicament = $_POST[""];
-
-        //fctie separata, sau mai degraba mai fac un hidden, si incerc sa il obtin atunci!!
-        $id_nomenclator = "";
-
-        //
-        $val_amanunt = "";
-
-        //if med necompensat = 0, else.. POST
-        $val_compensat = "";
-
         $val_decont = $val_amanunt - $val_compensat;
 
         $data_medicament_reteta = array(
@@ -155,11 +143,25 @@ class Retetemodel extends CI_Model
         $this->db->insert('medicamente_retete', $data_medicament_reteta);
     }
 
-    public function inregRetetaSiMedicamente()
+    public function inregRetetaSiMedicamente($tip_reteta)
     {
         $id_reteta = $this->insertReteta();
 
-        $this->insertMedicamentReteta($id_reteta);
+    //inreg toate medicamentele unei retete
+
+        $nr_med = $tip_reteta ? count($_POST["medicamente_c_"]) : count($_POST["medicamente_nc_"]);
+
+        for ($i = 1; $i <= $nr_med; $i++)
+        {
+            $id_medicament  = $tip_reteta ? $_POST["hidden_ids_medicamente_c_"]   : $_POST["hidden_ids_medicamente_nc_"];
+            $id_nomenclator = 0;
+        //fctie separata, sau mai degraba mai fac un hidden, si incerc sa il obtin atunci!!
+//            $id_nomenclator = $tip_reteta ? $_POST["medicamente_c_"]              : $_POST["medicamente_nc_"];
+            $val_amanunt    = $tip_reteta ? $_POST["vals_amanunt_medicamente_c_"] : $_POST["vals_medicamente_nc_"];
+            $val_compensat  = $tip_reteta ? $_POST["vals_amanunt_medicamente_c_"] : 0;
+
+            $this->insertMedicamentReteta($id_reteta, $id_medicament, $id_nomenclator, $val_amanunt, $val_compensat);
+        }
     }
 }
 ?>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe45f60d-99ff-4abe-a080-38fc83518b39" name="Default" comment="miercuri.08: &#10;++ autocomplete&#10;++ add_form&#10;++">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
+    <list default="true" id="fe45f60d-99ff-4abe-a080-38fc83518b39" name="Default" comment="vineri@mai.g">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_DB/evidenta_medicala.sql" afterPath="$PROJECT_DIR$/_DB/evidenta_medicala.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/header.php" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/lucrari.php" afterPath="$PROJECT_DIR$/application/controllers/lucrari.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/retetemodel.php" afterPath="$PROJECT_DIR$/application/models/retetemodel.php" />
@@ -11,19 +11,19 @@
     </list>
     <ignored path="EvidentaMedicala.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/header.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368098885069" ignored="false" />
+    <file path="/header.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368187018393" ignored="false" />
     <file path="/footer.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366633110161" ignored="false" />
     <file path="/login_view.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366633443197" ignored="false" />
     <file path="/a.dummy" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368044300115" ignored="false" />
     <file path="/welcome_view.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366634269973" ignored="false" />
     <file path="/login.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366692095252" ignored="false" />
-    <file path="/lucrari.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368008335032" ignored="false" />
+    <file path="/lucrari.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368172613355" ignored="false" />
     <file path="/dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368006161393" ignored="false" />
     <file path="/adauga_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1366977431693" ignored="false" />
     <file path="/bootstrap.css" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368043802935" ignored="false" />
-    <file path="/retetemodel.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368096978344" ignored="false" />
-    <file path="/salveaza_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368098744155" ignored="false" />
-    <file path="/Dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368075105629" ignored="false" />
+    <file path="/retetemodel.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368173465833" ignored="false" />
+    <file path="/salveaza_reteta.php" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368181156348" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe45f60d-99ff-4abe-a080-38fc83518b39" time="1368187121774" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,24 +47,24 @@
     <favorites_list name="EvidentaMedicala" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.51863855">
+    <splitter split-orientation="horizontal" split-proportion="0.42382497">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.7601351">
+        <splitter split-orientation="vertical" split-proportion="0.17792793">
           <split-first>
             <leaf>
               <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="517" column="13" selection-start="19133" selection-end="19133" vertical-scroll-proportion="0.0">
+                    <state line="524" column="13" selection-start="18457" selection-end="18457" vertical-scroll-proportion="-0.65384614">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="commentsmodel.php" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
+              <file leaf-file-name="lucrari.php" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="16" column="11" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+                    <state line="425" column="0" selection-start="14574" selection-end="14574" vertical-scroll-proportion="5.9859157">
                       <folding />
                     </state>
                   </provider>
@@ -79,19 +79,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="salveaza_reteta.php" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
+              <file leaf-file-name="commentsmodel.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="155" column="36" selection-start="11557" selection-end="11557" vertical-scroll-proportion="0.8095238">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="lucrari.php" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="393" column="66" selection-start="13971" selection-end="13971" vertical-scroll-proportion="-1.0">
+                    <state line="16" column="11" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -101,11 +92,23 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="retetemodel.php" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/application/models/retetemodel.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="139" column="0" selection-start="4677" selection-end="4677" vertical-scroll-proportion="1.9432625">
+                    <state line="150" column="0" selection-start="5097" selection-end="5097" vertical-scroll-proportion="-5.269231">
                       <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="salveaza_reteta.php" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="35" column="53" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.1337386">
+                      <folding>
+                        <element signature="e#2153#2173#0" expanded="true" />
+                        <element signature="e#4180#4202#0" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -119,9 +122,18 @@
           <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="485" column="39" selection-start="17455" selection-end="17455" vertical-scroll-proportion="0.42394015">
+                <state line="186" column="0" selection-start="6201" selection-end="6201" vertical-scroll-proportion="0.39650872">
                   <folding>
-                    <element signature="e#15207#15804#0" expanded="false" />
+                    <element signature="tag#script#11;tag#head#0;tag#html#0" expanded="false" />
+                    <element signature="e#2796#3596#0" expanded="false" />
+                    <element signature="e#3619#5091#0" expanded="false" />
+                    <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="false" />
+                    <element signature="tag#style#1;tag#head#0;tag#html#0" expanded="false" />
+                    <element signature="e#14514#14802#0" expanded="false" />
+                    <element signature="e#20020#20944#0" expanded="false" />
+                    <element signature="e#20945#24940#0" expanded="false" />
+                    <element signature="e#24941#25296#0" expanded="false" />
+                    <element signature="tag#body#0;tag#html#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -130,7 +142,7 @@
           <file leaf-file-name="log-2013-05-09.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-09.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="24" selection-start="377" selection-end="377" vertical-scroll-proportion="-1.9615384">
+                <state line="3" column="24" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -139,7 +151,7 @@
           <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/config/database.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="3" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-9.615385">
+                <state line="38" column="3" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -429,16 +441,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_93e8418133eb85e81a81e5e19c272776524496c6/bin/git.exe" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="133" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="125" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -489,27 +501,31 @@
       <created>1368039989888</created>
       <updated>1368039989888</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="joi@mai.g:&#10;++ name = medicamente[] ...">
+      <created>1368100652524</created>
+      <updated>1368100652524</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1276" y="-4" width="1288" height="1032" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42004505" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6711712" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26985413" sideWeight="0.6722973" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42004505" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -559,7 +575,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="miercuri.08: &#10;++ autocomplete&#10;++ add_form&#10;++" />
+    <option name="LAST_COMMIT_MESSAGE" value="joi@mai.g:&#10;++ name = medicamente[] ..." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -575,6 +591,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="++ autocomplete&#10;++ add_form" />
     <MESSAGE value="miercuri.08: &#10;++ autocomplete&#10;++ add_form&#10;++" />
+    <MESSAGE value="joi@mai.g:&#10;++ name = medicamente[] ..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,16 +628,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/detaliere_lucrare_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="115" selection-start="25180" selection-end="25180" vertical-scroll-proportion="0.33251834">
-          <folding />
-        </state>
+        <state line="300" column="115" selection-start="25180" selection-end="25180" vertical-scroll-proportion="0.33251834" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-08.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap/bootstrap.css">
@@ -639,14 +652,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="3" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-9.615385">
+        <state line="38" column="3" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="709" column="17" selection-start="10585" selection-end="10585" vertical-scroll-proportion="0.33294663">
+        <state line="709" column="17" selection-start="10585" selection-end="10585" vertical-scroll-proportion="0.33294663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-09.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="425" column="0" selection-start="14574" selection-end="14574" vertical-scroll-proportion="5.9859157">
           <folding />
         </state>
       </provider>
@@ -658,32 +683,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/lucrari.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="66" selection-start="13971" selection-end="13971" vertical-scroll-proportion="-1.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/logs/log-2013-05-09.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="377" selection-end="377" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/salveaza_reteta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="36" selection-start="11557" selection-end="11557" vertical-scroll-proportion="0.8095238">
-          <folding />
+        <state line="35" column="53" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.1337386">
+          <folding>
+            <element signature="e#2153#2173#0" expanded="true" />
+            <element signature="e#4180#4202#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="485" column="39" selection-start="17455" selection-end="17455" vertical-scroll-proportion="0.42394015">
+        <state line="186" column="0" selection-start="6201" selection-end="6201" vertical-scroll-proportion="0.39650872">
           <folding>
-            <element signature="e#15207#15804#0" expanded="false" />
+            <element signature="tag#script#11;tag#head#0;tag#html#0" expanded="false" />
+            <element signature="e#2796#3596#0" expanded="false" />
+            <element signature="e#3619#5091#0" expanded="false" />
+            <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="false" />
+            <element signature="tag#style#1;tag#head#0;tag#html#0" expanded="false" />
+            <element signature="e#14514#14802#0" expanded="false" />
+            <element signature="e#20020#20944#0" expanded="false" />
+            <element signature="e#20945#24940#0" expanded="false" />
+            <element signature="e#24941#25296#0" expanded="false" />
+            <element signature="tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>

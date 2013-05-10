@@ -342,6 +342,23 @@ class Lucrari extends CI_Controller {
             //A completat, da Inregistrare -> validare -> INSERT DB
 
 
+var_dump(count($_POST["medicamente_nc_"]));
+//var_dump($_POST["medicamente_nc_"][2]);
+//var_dump($_POST["info_medicamente_nc_"]);
+
+exit;
+
+/*foreach ($_POST["medicamente_nc_"] as $m)
+{
+    var_dump($m);
+}
+
+//            var_dump($_POST["medicamente_nc_"]);
+
+exit;*/
+
+
+
             $this->load->library('form_validation');
 
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -391,8 +408,12 @@ class Lucrari extends CI_Controller {
 
                 //if.... insert    else    update
 
+
+                $tip_reteta = $_POST["tip_reteta"];
+
 //                $id_reteta = $this->retetemodel->adaugaReteta();
-                $this->retetemodel->inregRetetaSiMedicamente();
+//                $this->retetemodel->inregRetetaSiMedicamente();
+                $this->retetemodel->inregRetetaSiMedicamente($tip_reteta);
 
             }
             else

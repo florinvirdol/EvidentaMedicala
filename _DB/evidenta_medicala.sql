@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: May 08, 2013 at 12:51 PM
--- Server version: 5.1.49-3
--- PHP Version: 5.3.3-7+squeeze14
+-- Host: 127.0.0.1
+-- Generation Time: May 10, 2013 at 02:58 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -54,18 +54,6 @@ INSERT INTO `doctori` (`id`, `nume`, `prenume`, `cod_parafa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dosare`
---
-
-CREATE TABLE IF NOT EXISTS `dosare` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nume` varchar(50) COLLATE utf8_romanian_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `farmacii`
 --
 
@@ -99,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `medicamente_nomenclatoare` (
   `data` date NOT NULL,
   `tip` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `medicamente_nomenclatoare`
@@ -107,7 +95,12 @@ CREATE TABLE IF NOT EXISTS `medicamente_nomenclatoare` (
 
 INSERT INTO `medicamente_nomenclatoare` (`id`, `nume_medicament`, `data`, `tip`) VALUES
 (1, 'nume_med1', '0000-00-00', 0),
-(2, 'nume_med2', '0000-00-00', 0);
+(2, 'nume_med2', '0000-00-00', 0),
+(3, 'nume_med3', '0000-00-00', 0),
+(4, 'nume_med4', '0000-00-00', 0),
+(5, 'nume_med5', '0000-00-00', 0),
+(6, 'anume_med2', '0000-00-00', 0),
+(7, 'aaanume_med2', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -119,8 +112,9 @@ CREATE TABLE IF NOT EXISTS `medicamente_retete` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
   `id_reteta` int(20) NOT NULL,
   `id_medicament` int(20) NOT NULL,
+  `id_nomenclator` int(20) NOT NULL,
   `valoare_amanunt` float NOT NULL,
-  `valoare_compensata` float NOT NULL,
+  `valoare_compensat` float NOT NULL,
   `valoare_decont` float NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
@@ -146,10 +140,11 @@ CREATE TABLE IF NOT EXISTS `motive` (
 
 CREATE TABLE IF NOT EXISTS `pacienti` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cnp` int(13) NOT NULL,
   `tip` int(1) NOT NULL,
   `nume` varchar(50) COLLATE utf8_romanian_ci NOT NULL,
   `prenume` varchar(50) COLLATE utf8_romanian_ci NOT NULL,
-  `cnp` int(13) NOT NULL,
+  `cod_asigurat` int(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
 
@@ -161,20 +156,19 @@ CREATE TABLE IF NOT EXISTS `pacienti` (
 
 CREATE TABLE IF NOT EXISTS `retete` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_doctor` int(2) NOT NULL,
   `id_utilizator` int(2) NOT NULL,
+  `id_doctor` int(2) NOT NULL,
+  `id_farmacie` int(2) DEFAULT NULL,
+  `id_pacient` int(11) DEFAULT NULL,
+  `nr_dosar` int(11) DEFAULT NULL,
   `tip` int(1) NOT NULL,
-  `id_pacient` int(11) NOT NULL,
-  `data_reteta` date NOT NULL,
-  `nr_fisa_inregistrare` int(20) NOT NULL,
-  `nr_registru_consultatii` int(20) NOT NULL,
-  `id_farmacie` int(2) NOT NULL,
-  `serie_reteta_compensata` varchar(20) COLLATE utf8_romanian_ci NOT NULL,
-  `nr_reteta_compensata` int(20) NOT NULL,
-  `validitate` int(1) NOT NULL,
-  `id_motive` int(2) NOT NULL,
-  `nr_din_dosar` int(3) NOT NULL,
-  `id_dosar` int(10) NOT NULL,
+  `data_reteta` date DEFAULT NULL,
+  `nr_fisa_pacient` int(20) DEFAULT NULL,
+  `nr_registru_consultatii` int(20) DEFAULT NULL,
+  `serie_reteta_compensata` varchar(20) COLLATE utf8_romanian_ci DEFAULT NULL,
+  `nr_reteta_compensata` int(20) DEFAULT NULL,
+  `validitate` int(1) DEFAULT NULL,
+  `id_motive` int(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
 
