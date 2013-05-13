@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2013 at 02:58 PM
+-- Generation Time: May 13, 2013 at 02:56 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -94,13 +94,13 @@ CREATE TABLE IF NOT EXISTS `medicamente_nomenclatoare` (
 --
 
 INSERT INTO `medicamente_nomenclatoare` (`id`, `nume_medicament`, `data`, `tip`) VALUES
-(1, 'nume_med1', '0000-00-00', 0),
-(2, 'nume_med2', '0000-00-00', 0),
-(3, 'nume_med3', '0000-00-00', 0),
-(4, 'nume_med4', '0000-00-00', 0),
-(5, 'nume_med5', '0000-00-00', 0),
-(6, 'anume_med2', '0000-00-00', 0),
-(7, 'aaanume_med2', '0000-00-00', 0);
+(1, 'nume med', '0000-00-00', 0),
+(2, 'nume medd', '0000-00-00', 0),
+(3, 'nume_meddd', '0000-00-00', 0),
+(4, 'nume_medddd', '0000-00-00', 0),
+(5, 'nume_meddddd', '0000-00-00', 0),
+(6, 'anume_medd', '0000-00-00', 0),
+(7, 'aaanume_med', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,14 @@ CREATE TABLE IF NOT EXISTS `medicamente_retete` (
   `valoare_compensat` float NOT NULL,
   `valoare_decont` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `medicamente_retete`
+--
+
+INSERT INTO `medicamente_retete` (`id`, `id_reteta`, `id_medicament`, `id_nomenclator`, `valoare_amanunt`, `valoare_compensat`, `valoare_decont`) VALUES
+(1, 7, 1, 0, 2, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -140,13 +147,21 @@ CREATE TABLE IF NOT EXISTS `motive` (
 
 CREATE TABLE IF NOT EXISTS `pacienti` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cnp` int(13) NOT NULL,
+  `cnp` bigint(13) NOT NULL,
   `tip` int(1) NOT NULL,
   `nume` varchar(50) COLLATE utf8_romanian_ci NOT NULL,
   `prenume` varchar(50) COLLATE utf8_romanian_ci NOT NULL,
   `cod_asigurat` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `pacienti`
+--
+
+INSERT INTO `pacienti` (`id`, `cnp`, `tip`, `nume`, `prenume`, `cod_asigurat`) VALUES
+(3, 1111111111111, 0, 'Virdol', 'Florin', 111111),
+(4, 2222222222222, 0, 'Ioana', '2Ioana22', 222222);
 
 -- --------------------------------------------------------
 
@@ -170,7 +185,20 @@ CREATE TABLE IF NOT EXISTS `retete` (
   `validitate` int(1) DEFAULT NULL,
   `id_motive` int(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `retete`
+--
+
+INSERT INTO `retete` (`id`, `id_utilizator`, `id_doctor`, `id_farmacie`, `id_pacient`, `nr_dosar`, `tip`, `data_reteta`, `nr_fisa_pacient`, `nr_registru_consultatii`, `serie_reteta_compensata`, `nr_reteta_compensata`, `validitate`, `id_motive`) VALUES
+(1, 1, 1, 1, 3, 1, 1, '2013-05-14', 1, 1, 'x', 1, -1, NULL),
+(2, 1, 1, 1, 3, 1, 1, '2013-05-14', 1, 1, 'x', 1, -1, NULL),
+(3, 1, 1, 1, 3, 1, 0, '2013-05-14', 1, 1, 'x', 1, -1, NULL),
+(4, 1, 1, 1, 3, 1, 0, '2013-05-14', 1, 1, 'x', 1, -1, NULL),
+(5, 1, 1, 1, 3, 1, 0, '2013-05-14', 1, 1, 'x', 1, -1, NULL),
+(6, 1, 1, 1, 3, 1, 0, '2013-05-14', 1, 1, 'x', 1, -1, NULL),
+(7, 1, 1, 1, 3, 1, 0, '2013-05-14', 1, 1, 'x', 1, -1, NULL);
 
 -- --------------------------------------------------------
 

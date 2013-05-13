@@ -81,15 +81,21 @@
                 </fieldset>
                 <fieldset id="info_pacienti" class="info_reteta">
                     <legend>Pacient</legend>
-                    <label for="cnp_pacient">CNP</label>
-                    <input type="text" name="cnp_pacient" value="<?=set_value('cnp_pacient')?>" class="<?=form_error('cnp_pacient') ? "error" : "nr"?>">
+                    <input type="hidden" name="hidden_id_pacient" id="hidden_id_pacient">
+                    <div id="cnp">
+                        <label for="cnp_pacient">CNP</label>
+                        <input type="text" name="cnp_pacient" id="cnp_pacient" value="<?=set_value('cnp_pacient')?>" class="<?=form_error('cnp_pacient') ? "error" : "nr"?>">
+                    </div>
                     <br>
                     <label for="nume_pacient">Nume</label>
-                    <input type="text" name="nume_pacient" value="<?=set_value('nume_pacient')?>" class="<?=form_error('nume_pacient') ? "error" : "lit"?>">
+                    <input type="text" name="nume_pacient" id="nume_pacient" value="<?=set_value('nume_pacient')?>" class="<?=form_error('nume_pacient') ? "error" : "lit"?>">
                     <label for="prenume_pacient">Prenume</label>
-                    <input type="text" name="prenume_pacient" value="<?=set_value('prenume_pacient')?>" class="<?=form_error('prenume_pacient') ? "error" : "lit"?>">
-                    <label for="cod_pacient">Cod Asigurat</label>
-                    <input type="text" name="cod_pacient" value="<?=set_value('cod_pacient')?>" class="<?=form_error('cod_pacient') ? "error" : "nr"?>">
+                    <input type="text" name="prenume_pacient" id="prenume_pacient" value="<?=set_value('prenume_pacient')?>" class="<?=form_error('prenume_pacient') ? "error" : "lit"?>">
+
+                    <div id="cod" style="display: inline">
+                        <label for="cod_pacient">Cod Asigurat</label>
+                        <input type="text" name="cod_pacient" id="cod_pacient" value="<?=set_value('cod_pacient')?>" class="<?=form_error('cod_pacient') ? "error" : "nr"?>">
+                    </div>
                 </fieldset>
                 <fieldset id="info_medicamente" class="info_reteta">
                     <legend>Medicamente</legend>
@@ -98,8 +104,10 @@
                             <fieldset id="info_medicament_c_1">
                                 <legend>Medicament 1</legend>
                                 <input type="hidden" name="hidden_ids_medicamente_c_[1]" id="hidden_id_medicament_c_1">
-                                <label for="international_medicamente_c_[1]">Nume Internațional</label>
-                                <input type="text" name="international_medicamente_c_[1]" class="autocomplete lit">
+                                <!--<label for="international_medicamente_c_[1]">Nume Internațional</label>
+                                <input type="text" name="international_medicamente_c_[1]" class="autocomplete lit">-->
+                                <label for="medicamente_c_[1]">Nume Internațional</label>
+                                <input type="text" name="medicamente_c_[1]" class="autocomplete lit">
                                 <label for="comercial_medicamente_c_[1]">Nume Comercial</label>
                                 <input type="text" name="comercial_medicamente_c_[1]" class="lit">
                                 <br>

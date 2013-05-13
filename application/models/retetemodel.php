@@ -69,6 +69,20 @@ class Retetemodel extends CI_Model
         }
     }
 
+    function _ifCNPExists($cnp_pacient)
+    {
+        $result = $this->db->select('*')->from('pacienti')->where('cnp', $cnp_pacient)->get()->row(0);
+
+        $return = array();
+//        return (!empty($result) ? true : false);
+
+        array_push($return, (!empty($result) ? true : false));
+
+        array_push($return, $result);
+
+        return $return;
+    }
+
     public function insertReteta()
     {
         //?? e null in session pt Secretariat!!! ????
@@ -77,15 +91,8 @@ class Retetemodel extends CI_Model
         $id_utilizator = $_SESSION['user_id'];
         $id_doctor = $_POST["nume_doctor"];
         $id_farmacie = $_POST["farmacie"];
-        $nr_dosar = $_POST["nr_dosar"];//!!
-
-//Pacient : cnp, nume prenume ??
-//        $id_pacient = $_POST["__pacient"];
-
-//        $cnp_pacient = $_POST["cnp_pacient"];
-//        $nume_pacient = $_POST["nume_pacient"];
-//        $prenume_pacient = $_POST["prenume_pacient"];
-
+        $id_pacient = $_POST["hidden_id_pacient"];
+        $nr_dosar = $_POST["nr_dosar"];
         $tip = $_POST["tip_reteta"];
         $data_reteta = $_POST["data_eliberare_reteta"];
         $nr_fisa_pacient = $_POST["nr_fisa_pacient"];
@@ -94,20 +101,18 @@ class Retetemodel extends CI_Model
         $serie_reteta_compensata = $_POST["serie_reteta_compensata"];
         $nr_reteta_compensata = $_POST["nr_reteta_compensata"];
 
-        $validitate = "-1";//!nu a fost inca vertificata ... validata!
+//!nu a fost inca vertificata ... validata!
+        $validitate = "-1";
 
 //        $id_motive = $_POST["?null?"];
 
-
 //        var_dump($_REQUEST);exit;//!!!!!!!!
 
-
         $data_reteta = array(
-            //            'id' => AutoIncrement,
             'id_utilizator' => $id_utilizator,
             'id_doctor' => $id_doctor,
             'id_farmacie' => $id_farmacie,
-//            'id_pacient' => $id_pacient,//???
+            'id_pacient' => $id_pacient,
             'nr_dosar' => $nr_dosar,
             'tip' => $tip,
             'data_reteta' => $data_reteta,
@@ -129,6 +134,13 @@ class Retetemodel extends CI_Model
 //    public function insertMedicamentReteta($id_reteta)
     public function insertMedicamentReteta($id_reteta, $id_medicament, $id_nomenclator, $val_amanunt, $val_compensat)
     {
+//        echo;
+/*
+        print_r($val_amanunt);
+        print_r($val_compensat);
+
+        exit;*/
+
         $val_decont = $val_amanunt - $val_compensat;
 
         $data_medicament_reteta = array(
@@ -153,12 +165,14 @@ class Retetemodel extends CI_Model
 
         for ($i = 1; $i <= $nr_med; $i++)
         {
-            $id_medicament  = $tip_reteta ? $_POST["hidden_ids_medicamente_c_"]   : $_POST["hidden_ids_medicamente_nc_"];
+            $id_medicament  = $tip_reteta ? $_POST["hidden_ids_medicamente_c_"][$i]   : $_POST["hidden_ids_medicamente_nc_"][$i];
+
+            //fctie separata, sau mai degraba mai fac un hidden, si incerc sa il obtin atunci!!
             $id_nomenclator = 0;
-        //fctie separata, sau mai degraba mai fac un hidden, si incerc sa il obtin atunci!!
 //            $id_nomenclator = $tip_reteta ? $_POST["medicamente_c_"]              : $_POST["medicamente_nc_"];
-            $val_amanunt    = $tip_reteta ? $_POST["vals_amanunt_medicamente_c_"] : $_POST["vals_medicamente_nc_"];
-            $val_compensat  = $tip_reteta ? $_POST["vals_amanunt_medicamente_c_"] : 0;
+
+            $val_amanunt    = $tip_reteta ? $_POST["vals_amanunt_medicamente_c_"][$i] : $_POST["vals_medicamente_nc_"][$i];
+            $val_compensat  = $tip_reteta ? $_POST["vals_amanunt_medicamente_c_"][$i] : 0;
 
             $this->insertMedicamentReteta($id_reteta, $id_medicament, $id_nomenclator, $val_amanunt, $val_compensat);
         }

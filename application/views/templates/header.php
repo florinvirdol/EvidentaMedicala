@@ -196,7 +196,7 @@ $whereiam = $this->uri->segment('2');
 if ($whereiam == 'salveazaReteta')
 {
     ?>
-    <!--                TODO !! download locally-->
+<!--                TODO !! download locally-->
     <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
 
     <style>
@@ -218,9 +218,16 @@ if ($whereiam == 'salveazaReteta')
 
         $(document).ready(function()
         {
-
 //            _cnpIfLenght==13=>ajax=>nume_prenume_cod_
-
+            $('#cnp_pacient').keyup(function(event)
+            {
+                //taste diferite de arrowkeys
+                var arrowkeys = [37, 38, 39, 40];
+                if ($.inArray(event.keyCode, arrowkeys) == -1)
+                {
+                    cnpLengthAjax();
+                }
+            });
 
             //TODO: lucrari -> retete : controller !!!
 
@@ -339,7 +346,8 @@ if ($whereiam == 'salveazaReteta')
                         },
                         cnp_pacient:
                         {
-                            rangelength: [13, 13]
+                            rangelength: [13, 13],
+                            number: true
                         }
                     },
                     messages:
@@ -377,8 +385,66 @@ if ($whereiam == 'salveazaReteta')
                 max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
                 min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
             });
-
         });
+
+        function cnpLengthAjax()
+        {
+            var $_cnp_pacient = $("#cnp_pacient");
+            var $_cnp_pacient_value = $_cnp_pacient.val();
+
+            if ($.isNumeric($_cnp_pacient_value) && $_cnp_pacient_value.length == 13)
+            {
+                var $_url = "<?=base_url()?>" + "lucrari/checkIfCNPExists";
+
+                $.ajax(
+                    {
+                        type: "POST",
+                        url: $_url,
+                        data:
+                        {
+                            'cnp_pacient' : $_cnp_pacient_value
+                        },
+                        dataType: 'json'
+                    })
+                    .done(function(data)
+                    {
+                        if(data.exists)
+                        {
+                            $_cnp_pacient.css({'background-color' : 'white'});
+
+                            $("#hidden_id_pacient").val(data.pacient["id"]);
+                            $("#nume_pacient").val(data.pacient["nume"]);
+                            $("#prenume_pacient").val(data.pacient["prenume"]);
+                            $("#cod_pacient").val(data.pacient["cod_asigurat"]);
+                        }
+                        else
+                        {
+                            $_cnp_pacient.css({'background-color' : 'red'});
+                            alert('CNP NU exista!');
+                    //TODO:: cand nu exista cnp-ul, trebuie adaugat un pacient nou in inputuri,
+                    //si apoi inserat in tabela de pacienti, si etichetata reteta ca nu exista cnp-ul!~..
+            // => gen: introduceti numele si 0 la cnp si la asigurat!
+
+                            $("#hidden_id_pacient").val("");
+
+                            $("#nume_pacient").val("");
+                            $("#prenume_pacient").val("");
+                            $("#cod_pacient").val("");
+
+                        }
+                    })
+                    .fail(function(data){
+                        //error
+                    });
+            }
+            else
+            {
+                $("#hidden_id_pacient").val("");
+                $("#nume_pacient").val("");
+                $("#prenume_pacient").val("");
+                $("#cod_pacient").val("");
+            }
+        }
 
         function inputsAutocomplete()
         {
@@ -467,6 +533,10 @@ if ($whereiam == 'salveazaReteta')
                     $("#m_c").hide();
 
                     $("#m_nc").show();
+
+                    $("#cnp").hide();
+                    $("#cod").hide();
+
                     break;
 
                 case "1":
@@ -474,6 +544,10 @@ if ($whereiam == 'salveazaReteta')
 
                     $("#info_doar_compensata").show();
                     $("#m_c").show();
+
+                    $("#cnp").show();
+                    $("#cod").show();
+
                     break;
 
                 default:
@@ -497,8 +571,10 @@ if ($whereiam == 'salveazaReteta')
                 '<fieldset id="info_medicament_c_' + contor_med + '">' +
                     '<legend>Medicament ' + contor_med + '</legend>' +
                     '<input type="hidden" name="hidden_ids_medicamente_c_[' + contor_med + ']" id="hidden_id_medicament_c_' + contor_med + '">' +
-                    '<label for="international_medicamente_c_[' + contor_med + ']">Nume International</label>' +
-                    '<input type="text" name="international_medicamente_c_[' + contor_med + ']" class="autocomplete lit">' +
+                    /*'<label for="international_medicamente_c_[' + contor_med + ']">Nume International</label>' +
+                    '<input type="text" name="international_medicamente_c_[' + contor_med + ']" class="autocomplete lit">' +*/
+                    '<label for="medicamente_c_[' + contor_med + ']">Nume International</label>' +
+                    '<input type="text" name="medicamente_c_[' + contor_med + ']" class="autocomplete lit">' +
                     '<label for="comercial_medicamente_c_[' + contor_med + ']">Nume Comercial</label>' +
                     '<input type="text" name="comercial_medicamente_c_[' + contor_med + ']" class="lit">' +
                     '<br>' +
