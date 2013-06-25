@@ -497,9 +497,8 @@ if ($whereiam == 'salveazaReteta')
                         .replace(")", "\\)");
 
 //                    if (!ui.item)
-                    if ($(".ui-autocomplete li:textEquals('" + val + "')").size() ===  0)
+                    if ($(".ui-autocomplete li:textEquals('" + val + "')").size() === 0)
                     {
-
                         //
                         //TODO: forteaza sa aleaga din lista
                         //DAR
