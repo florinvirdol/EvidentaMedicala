@@ -218,9 +218,15 @@ if ($whereiam == 'salveazaReteta')
 
         $(document).ready(function()
         {
+
+
+
 //            _cnpIfLenght==13=>ajax=>nume_prenume_cod_
             $('#cnp_pacient').keyup(function(event)
             {
+                addInputsRules();
+
+
                 //taste diferite de arrowkeys
                 var arrowkeys = [37, 38, 39, 40];
                 if ($.inArray(event.keyCode, arrowkeys) == -1)
@@ -242,18 +248,32 @@ if ($whereiam == 'salveazaReteta')
 //http://jsfiddle.net/fU8hn/4/
 
 
+
             inputsAutocomplete();
+
+
+            // adding rules for inputs with class 'comment'
+//            ruleRequiredInputSelect();
+
+//            ruleNrInput();
+<!---->
+//            ruleLitInput();
+<!---->
+//            ruleNr_LitInput();
+
 
             $('#salveazaRetetaForm').on('submit', function(event)
             {
-                // adding rules for inputs with class 'comment'
+                addInputsRules();
+
+                /*// adding rules for inputs
                 ruleRequiredInputSelect();
 
                 ruleNrInput();
 
                 ruleLitInput();
 
-                ruleNr_LitInput();
+                ruleNr_LitInput();*/
             });
 
             //TODO: !!! add rules..... independente??? pt fiecare camp?? numeric../ lenght
@@ -446,6 +466,13 @@ if ($whereiam == 'salveazaReteta')
             }
         }
 
+        //??
+        $.expr[':'].textEquals = function(a, i, m)
+        {
+            return $(a).text() === m[3];
+        };
+        //??
+
         function inputsAutocomplete()
         {
             $("input.autocomplete").autocomplete({
@@ -453,7 +480,7 @@ if ($whereiam == 'salveazaReteta')
                 source: "<?=base_url()?>" + "lucrari/getMedicamenteNecompensate" + "/1",
                 select: function(event, ui)
                 {
-//                    console.log(defaultDate);
+                    $(this).css({'background-color' : 'white'});
 
                     //TODO dynamic id...
                     $("#hidden_id_medicament_nc_1").val(ui.item.id);
@@ -462,8 +489,44 @@ if ($whereiam == 'salveazaReteta')
                     // cand selectez ceva pt internationala
                     // sa bage autocomplete si pt comerciala in functie de ce e la internatz
 
+                },
+                change: function (ev, ui)
+                {
+                    var val = $(this).val()
+                        .replace("(", "\\(")
+                        .replace(")", "\\)");
+
+//                    if (!ui.item)
+                    if ($(".ui-autocomplete li:textEquals('" + val + "')").size() ===  0)
+                    {
+
+                        //
+                        //TODO: forteaza sa aleaga din lista
+                        //DAR
+                        //daca introduce manual ceva din lista, nu ii accepta.. :|
+                        $(this).css({'background-color' : 'red'});
+                        alert("Alegeti un medicament din lista de sugestii!");
+                        $(this).val("");
+                    }
+                    else
+                    {
+                        $(this).css({'background-color' : 'white'});
+                    }
                 }
             });
+        }
+
+
+        function addInputsRules()
+        {
+            // adding rules for inputs
+            ruleRequiredInputSelect();
+
+            ruleNrInput();
+
+            ruleLitInput();
+
+            ruleNr_LitInput();
         }
 
         function ruleRequiredInputSelect()
